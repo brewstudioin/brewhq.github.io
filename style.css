@@ -3,12 +3,12 @@
     /* Your styles for large screens */
     body {
         width: 80%;
-        margin: auto !important;
+        margin: 20px auto !important;
     }
 }
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 5px 25px;
+    margin: 20px 25px;
     padding: 0;
 }
 .legend-text {
