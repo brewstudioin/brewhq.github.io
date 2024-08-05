@@ -1,0 +1,84 @@
+/** media query for large screen width 80% & margin auto */
+@media only screen and (min-width: 1200px) {
+    /* Your styles for large screens */
+    body {
+        width: 80%;
+        margin: auto !important;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 25px;
+    padding: 0;
+}
+.legend-text {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.legend-text h1 {
+    background-image: linear-gradient(90deg, #002447 17%, #53D3D1 56%, #FEB249 100%);
+    color: transparent;
+    background-clip: text;
+    font-size: 3em;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 25px 0px;
+    color: #f1f1f1;
+}
+
+.intro {
+    display: flex;
+    margin: 20px 0px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0px;
+}
+
+.features-connect {
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+    justify-content: center;
+}
+
+.features {
+    display: flex;
+    margin: 20px 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0px;
+    font-size: 1.2em;
+}
+
+.legend-text-centered {
+    flex: 8;
+    align-items: self-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    margin: 20px 0px;
+}

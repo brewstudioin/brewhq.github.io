@@ -4,58 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrewHQ</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Brew Logo">
-            <h1>Brew</h1>
+        <div style="display: flex;">
+            <img src="assets/logo.svg" alt="Brew Logo">
+            <h1>BrewHQ</h1>
         </div>
-        <h2>Draft Requirements, Code - Without Worrying About Impact</h2>
-        <p>Let Brew be your coding wizard! The only tool you need to make sure your team can address issues arising from poor impact analysis early, saving time and costs throughout the product development lifecycle.</p>
-        <button>Join Waitlist</button>
     </header>
-    <section class="intro">
-        <p>Ever wish you could see your code through a crystal ball? <strong>Brew</strong> is the magical looking glass into your codebase! We transform perplexing lines of code into visual maps that everyone from wizards to muggles (coders and non-coders alike) can understand.</p>
+    <section style="display: flex; margin: 20px 0px;">
+        <div style="flex: 4; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/legend.svg" alt="auto-magically">
+        </div>
+        <div class="legend-text">
+            <h1>Draft Requirements, Code - Without Worrying About Impact</h1>
+            <p>Let Brew be your coding wizard! The only tool you need to make sure your team can address issues arising from poor impact analysis early, saving time and costs throughout the product development lifecycle.</p>
+            <button class="button">Join Waitlist</button>
+        </div>
     </section>
-    <section class="features">
-        <div class="feature">
-            <img src="feature1.png" alt="Feature 1">
-            <p>Brew not only foresees troubles but also conjures alternative code and user flows that keep your business needs front and center, all while banishing bugs to the underworld.</p>
+    <section class="intro">
+        <div class="legend-text">
+            <p>Ever wish you could see your code through a crystal ball? <strong>Brew</strong> is the magical looking glass into your codebase! We transform perplexing lines of code into visual maps that everyone from wizards to muggles (coders and non-coders alike) can understand.</p>
         </div>
-        <div class="feature">
-            <img src="feature2.png" alt="Feature 2">
-            <p><strong>Brew</strong> also charms your workflow by:</p>
-            <ul>
-                <li>Making knowledge transfer as easy as a wave of a wand—totally seamless, even offline.</li>
-                <li>Keeping your software docs updated, auto-magically.</li>
-                <li>Becoming the single source of truth your team will swear by.</li>
-                <li>Maintaining release cycles complete with enchanted release notes.</li>
-            </ul>
+        <div style="flex: 4; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/fold2.svg" alt="do you wonder?">
         </div>
+    </section>
+    <section class="features-connect" style="text-align: center;">
+            <p>But wait—there's more! Brew not only foresees troubles but also conjures alternative code and user flows that keep your business needs front and centre, all while banishing bugs to the underworld.</p>
+    </section>
+    <section>
+        <div class="features">
+            <div style="flex: 4; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/fold3.svg" alt="our features">
+            </div>
+            <div class="legend-text-centered">
+                <p><strong>Brew</strong> also charms your workflow by:</p>
+                <ul>
+                    <div style="display: flex;">
+                        <li style="flex: 1;">Making knowledge transfer as easy as a wave of a wand—totally seamless, even offline.</li>
+                        <li style="flex: 1;">Keeping your software docs updated, auto-magically.</li>
+                    </div>
+                    <div style="display: flex;">
+                        <li style="flex: 1;">Becoming the single source of truth your team will swear by.</li>
+                        <li style="flex: 1;">Maintaining release cycles complete with enchanted release notes.</li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="features-connect" style="flex-direction: column;">
+        <p>Brewed by a dynamic duo with a combined experience of over 20 years in the SaaS cauldron, Brew is the brainchild of a Solution Architect and a Product Manager. Driven by a passion to empower teams and having felt the pain of inefficient impact analysis, we're here to ensure developers and product managers have the magic they need to ship quality code.</p>
+        <p>Our mission? To empower development and product teams by providing a tool that helps them assess the impact of new requirements or change requests. This enables them to address potential issues early, saving businesses time and costs throughout the product development lifecycle.</p>
     </section>
     <section class="about">
-        <h3>Why <strong>Brew</strong>?</h3>
-        <div class="stats">
-            <div class="stat">
-                <p>A sobering 20% of projects only see the light of success.</p>
-            </div>
-            <div class="stat">
-                <p>Roughly 50% of digital mishaps stem from poorly brewed requirements.</p>
-            </div>
-            <div class="stat">
-                <p>Developers spend about 60% of their time trying to decode the existing cryptic code.</p>
-            </div>
-            <div class="stat">
-                <p>Poor impact analysis? It's responsible for over 25% of defects!</p>
-            </div>
+        <div class="legend-text-centered">
+            <p>Why <strong>Brew</strong>?</p>
+            <ul>
+                <div style="display: flex;">
+                    <li style="flex: 1;">A sobering 20% of projects only see the light of success.</li>
+                    <li style="flex: 1;">Roughly 50% of digital mishaps stem from poorly brewed requirements.</li>
+                </div>
+                <div style="display: flex;">
+                    <li style="flex: 1;">Developers spend about 60% of their time trying to decode the existing cryptic code.</li>
+                    <li style="flex: 1;">Poor impact analysis? It's responsible for over 25% of defects!</li>
+                </div>
+            </ul>
+        </div>
+        <div style="flex: 4; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/fold3.svg" alt="why god why?">
         </div>
     </section>
     <footer>
-        <p>Ready to launch a new feature or tweak an old spell (old requirement)? Watch it play out on <strong>Brew's</strong> visual stage before your code goes live, keeping those pesky bugs at bay.</p>
-        <input type="email" placeholder="Enter Email address">
-        <button>Join Waitlist</button>
+        <div class="features">
+            <div style="flex: 4; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/contact.svg" alt="get in touch!">
+            </div>
+            <div class="legend-text-centered">
+                <p>Ready to launch a new feature or tweak an old spell (old requirement)? Watch it play out on <strong>Brew's</strong> visual stage before your code goes live, keeping those pesky bugs at bay.</p>
+                <div style="display: flex;">
+                    <input type="email" placeholder="Enter Email address">
+                    <button class="button" style="margin: 0px 10px;">Join Waitlist</button>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
