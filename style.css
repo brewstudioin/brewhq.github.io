@@ -70,6 +70,12 @@ ul li {
     font-size: 1.2em;
 }
 
+.list-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 16px;
+}
+
 .legend-text-centered {
     flex: 8;
     align-items: self-start;
@@ -81,4 +87,20 @@ ul li {
 .about {
     display: flex;
     margin: 20px 0px;
+}
+
+.flex-direction {
+    flex-direction: row;
+}
+
+@media (max-width: 800px) {
+    .flex-direction {
+      flex-direction: column;
+    }
+    .flex-center {
+      align-items: center;
+    }
+    .text-center {
+      text-align: center;
+    }
 }
