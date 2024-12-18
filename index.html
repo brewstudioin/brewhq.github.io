@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>BrewHQ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/favico.png">
@@ -67,12 +67,48 @@
             </div>
             <div class="legend-text-centered">
                 <p>Ready to launch a new feature or tweak an old spell (old requirement)? Watch it play out on <span style="font-family: Rammetto One">Brew's</span> visual stage before your code goes live, keeping those pesky bugs at bay.</p>
-                <div style="display: flex;" class="flex-direction">
-                    <input type="email" placeholder="Enter Email address" style="height: 50px;margin: auto;width: 250px;margin-right: 10px;">
-                    <button style="font-family: Rammetto One; padding: 15px 15px" class="button">Join Waitlist</button>
+                <div style="display: flex; gap: 10px; width: 100%; max-width: 500px;" class="flex-direction">
+                    <input type="email" id="emailInput" placeholder="Enter Email address" style="min-height: 50px; margin: 25px 0px; flex: 1;">
+                    <button onclick="sendToSlack()" style="font-family: Rammetto One; padding: 15px; flex: 1;" class="button">Join Waitlist</button>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        async function sendToSlack() {
+            const email = document.getElementById('emailInput').value;
+            
+            // Validate email
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Replace this URL with your actual Slack webhook URL
+            const webhookUrl = 'https://hooks.slack.com/services/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';
+            
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: `New waitlist signup: ${email}`
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Thank you for joining the waitlist!');
+                    document.getElementById('emailInput').value = ''; // Clear input
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, something went wrong. Please try again later.');
+            }
+        }
+    </script>
 </body>
 </html>

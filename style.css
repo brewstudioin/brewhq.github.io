@@ -21,8 +21,9 @@ body {
 .legend-text h1 {
     background-image: linear-gradient(90deg, #002447 17%, #53D3D1 56%, #FEB249 100%);
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
-    font-size: 3em;
+    font-size: clamp(1.5em, 5vw, 3em);
 }
 
 .button {
@@ -44,7 +45,8 @@ body {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: clamp(1em, 3vw, 1.2em);
+    line-height: 1.5;
     margin: 10px 0px;
 }
 
@@ -96,6 +98,7 @@ ul li {
 @media (max-width: 800px) {
     .flex-direction {
       flex-direction: column;
+      gap: 2rem;
     }
     .flex-center {
       align-items: center;
@@ -103,4 +106,30 @@ ul li {
     .text-center {
       text-align: center;
     }
+    .legend-text-centered {
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .features, .features-connect {
+      padding: 0 1rem;
+    }
+    .list-grid-wrapper {
+      grid-template-columns: 1fr;
+    }
+    footer .flex-direction {
+      gap: 1rem;
+    }
+    footer input[type="email"] {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    footer .button {
+      width: 100%;
+    }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
