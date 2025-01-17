@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Understanding Code Impact Analysis - BrewHQ Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favico.png">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rammetto One'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
+</head>
+<body style="font-family:Raleway">
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div style="display: flex;">
+                <img src="assets/logo.svg" alt="Brew Logo">
+                <h1 style="color: #002448;">BrewHQ</h1>
+            </div>
+            <nav>
+                <a href="index.html" style="text-decoration: none; color: #002448; font-family: 'Rammetto One'; padding: 10px 20px;">Home</a>
+                <a href="blog.html" style="text-decoration: none; color: #002448; font-family: 'Rammetto One'; padding: 10px 20px;">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <article style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+        <header style="margin-bottom: 40px; text-align: center;">
+            <h1 style="font-family: Rammetto One; color: #002448; font-size: 2.5em;">Understanding Code Impact Analysis</h1>
+            <div style="color: #666; margin-top: 10px;">
+                <span>Published: January 15, 2024</span>
+                <span style="margin-left: 20px;">By: BrewHQ Team</span>
+            </div>
+        </header>
+
+        <div class="blog-content" style="line-height: 1.8; color: #333;">
+            <p style="margin-bottom: 20px;">
+                In today's fast-paced software development environment, understanding the impact of code changes is crucial for maintaining system stability and preventing unexpected issues.
+            </p>
+
+            <h2 style="font-family: Rammetto One; color: #002448; margin: 30px 0 20px;">Why Impact Analysis Matters</h2>
+            <p style="margin-bottom: 20px;">
+                Code impact analysis helps development teams understand the ripple effects of their changes across the codebase. This understanding is crucial for:
+            </p>
+            <ul style="margin-bottom: 20px; margin-left: 20px;">
+                <li style="margin-bottom: 10px;">Identifying potential risks before they become problems</li>
+                <li style="margin-bottom: 10px;">Planning more accurate development timelines</li>
+                <li style="margin-bottom: 10px;">Reducing unexpected side effects</li>
+                <li style="margin-bottom: 10px;">Improving code quality and maintainability</li>
+            </ul>
+
+            <h2 style="font-family: Rammetto One; color: #002448; margin: 30px 0 20px;">Best Practices for Impact Analysis</h2>
+            <p style="margin-bottom: 20px;">
+                To effectively analyze code impact, teams should follow these key practices:
+            </p>
+            <ol style="margin-bottom: 20px; margin-left: 20px;">
+                <li style="margin-bottom: 10px;">Use automated tools to track dependencies</li>
+                <li style="margin-bottom: 10px;">Maintain comprehensive documentation</li>
+                <li style="margin-bottom: 10px;">Implement thorough testing strategies</li>
+                <li style="margin-bottom: 10px;">Review changes with stakeholders</li>
+            </ol>
+
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin: 30px 0;">
+                <p style="font-style: italic;">
+                    "Understanding code impact is not just about analyzing code – it's about understanding the broader implications for your business and users."
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+            <h3 style="font-family: Rammetto One; color: #002448;">Related Posts</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">
+                    <a href="blog-detail-requirements.html" style="color: #002448; text-decoration: none; font-family: Rammetto One;">Best Practices for Requirements Management →</a>
+                </li>
+                <li style="margin: 10px 0;">
+                    <a href="blog-detail-automation.html" style="color: #002448; text-decoration: none; font-family: Rammetto One;">Automating Documentation Updates →</a>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+    <footer>
+        <div class="features">
+            <div class="legend-text-centered" style="align-items: center;">
+                <p>Enjoyed this article? Stay updated with our latest insights!</p>
+                <div style="display: flex; gap: 10px; width: 100%; max-width: 500px;" class="flex-direction">
+                    <input type="email" id="emailInput" placeholder="Enter Email address" style="min-height: 50px; margin: 25px 0px; flex: 1;">
+                    <button onclick="sendToSlack()" style="font-family: Rammetto One; padding: 15px; flex: 1;" class="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function sendToSlack() {
+            const email = document.getElementById('emailInput').value;
+            
+            // Validate email
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Replace this URL with your actual Slack webhook URL
+            // const webhookUrl = 'https://hooks.slack.com/services/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';
+            const webhookUrl = 'https://hook.eu1.make.com/gosxltu18ivikoeunwxjs5gaotjywigi';
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: `New waitlist signup: ${email}`
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Thank you for joining the waitlist!');
+                    document.getElementById('emailInput').value = ''; // Clear input
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, something went wrong. Please try again later.');
+            }
+        }
+    </script>
+</body>
+</html> 
