@@ -26,23 +26,11 @@
         <h1 style="font-family: Rammetto One; color: #002448; text-align: center;">Latest Blog Posts</h1>
         
         <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-            <!-- Example blog posts - you can duplicate these as needed -->
-            <article class="blog-card" style="background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h2 style="font-family: Rammetto One; color: #002448; font-size: 1.5em;">Understanding Code Impact Analysis</h2>
-                <p style="color: #666; margin: 10px 0;">Learn how to effectively analyze the impact of code changes before they affect your production environment.</p>
-                <a href="blogs/blog-detail.html" style="color: #002448; text-decoration: none; font-family: Rammetto One; display: inline-block; margin-top: 10px;">Read More →</a>
-            </article>
 
             <article class="blog-card" style="background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h2 style="font-family: Rammetto One; color: #002448; font-size: 1.5em;">Best Practices for Requirements Management</h2>
-                <p style="color: #666; margin: 10px 0;">Discover the key strategies for managing software requirements effectively in modern development teams.</p>
-                <a href="blogs/blog-detail-requirements.html" style="color: #002448; text-decoration: none; font-family: Rammetto One; display: inline-block; margin-top: 10px;">Read More →</a>
-            </article>
-
-            <article class="blog-card" style="background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h2 style="font-family: Rammetto One; color: #002448; font-size: 1.5em;">Automating Documentation Updates</h2>
-                <p style="color: #666; margin: 10px 0;">How to keep your software documentation fresh and relevant with automated tools and processes.</p>
-                <a href="blogs/blog-detail-automation.html" style="color: #002448; text-decoration: none; font-family: Rammetto One; display: inline-block; margin-top: 10px;">Read More →</a>
+                <h2 style="font-family: Rammetto One; color: #002448; font-size: 1.5em;">The True Cost of Bad Requirements</h2>
+                <p style="color: #666; margin: 10px 0;">Discover how impact analysis prevents delays, budget overruns, and failures while boosting project success.</p>
+                <a href="blogs/blog-detail-requirements-impact.html" style="color: #002448; text-decoration: none; font-family: Rammetto One; display: inline-block; margin-top: 10px;">Read More →</a>
             </article>
         </div>
     </section>
@@ -58,42 +46,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        async function sendToSlack() {
-            const email = document.getElementById('emailInput').value;
-            
-            // Validate email
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-
-            // Replace this URL with your actual Slack webhook URL
-            // const webhookUrl = 'https://hooks.slack.com/services/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';
-            const webhookUrl = 'https://hook.eu1.make.com/gosxltu18ivikoeunwxjs5gaotjywigi';
-            try {
-                const response = await fetch(webhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        text: `New waitlist signup: ${email}`
-                    })
-                });
-
-                if (response.ok) {
-                    alert('Thank you for joining the waitlist!');
-                    document.getElementById('emailInput').value = ''; // Clear input
-                } else {
-                    throw new Error('Failed to send message');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Sorry, something went wrong. Please try again later.');
-            }
-        }
-    </script>
+    <script src="scripts/footer.js"></script>
 </body>
 </html> 
