@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Brew</title>
+    <link rel="icon" type="image/x-icon" href="assets/favico.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="about-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="assets/logo.svg" alt="Brew Logo">
+                <h1>Brew</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html" style="font-weight: bold;">About</a>
+                <a href="https://brewstudio.in/blogs/">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="about-main">
+        <section class="about-hero">
+            <h2>About Brew</h2>
+            
+            <div class="about-content">
+                <div class="about-section">
+                    <h3>Our Philosophy</h3>
+                    <p>
+                        At Brew, we believe software teams deserve absolute clarity—from the moment a requirement is conceived to the instant it goes live. We blend cutting-edge AI with a human-first approach, ensuring every insight enhances developer productivity without removing their ultimate authority. Our aim is simple: eliminate blind spots, empower teams to move faster with fewer surprises, and enable seamless evolution of even the most complex systems. By making impact analysis part of everyday development, we're helping teams build, ship, and innovate with confidence—every single day.
+                    </p>
+                </div>
+
+                <div class="about-section">
+                    <h3>Our Story</h3>
+                    <p>
+                        While working as a Product Manager (Richa) and Engineering Manager (Somangshu) across multiple products, we saw firsthand how poor requirements repeatedly cost clients time and money. We began envisioning a visual graph of the product—one that clearly shows how code modules depend on each other and flags the impact of new requirements on existing systems. This dream soon grew to include curating test cases, attaching design screens, and ensuring everything was mapped back to the requirements for complete coverage. With over 20 years of collective SaaS experience, we combined our skills as a Solution Architect and Product Manager to brew Brew—a platform driven by the passion to empower teams with the clarity, confidence, and magic they need to ship quality code.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="legend-text-centered">
+                <p>Don't Let Hidden Dependencies Derail Your Next Release.
+Brew is the easiest, smartest way to keep your codebase healthy and your team moving forward.</p>
+                <div class="footer-form flex-direction">
+                    <input type="email" id="emailInput" placeholder="Enter Email address" class="footer-input">
+                    <button onclick="sendToSlack()" class="button footer-button">Join Waitlist</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/typing.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html> 
