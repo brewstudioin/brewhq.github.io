@@ -11,9 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(typeWriter, 100);
         } else {
             // Show impact columns after typing is complete
-            setTimeout(() => {
-                impactColumns.classList.add('visible');
-            }, 500);
+            initializeAnimations();
         }
     }
 

@@ -5,8 +5,8 @@ const ANIMATION_CONFIG = {
         threshold: 0.1
     },
     requirementPreview: {
-        initialDelay: 1000,
-        riskDelay: 500
+        initialDelay: 800,
+        riskDelay: 300
     }
 };
 
@@ -46,6 +46,7 @@ const handleScroll = () => {
 const requirementInput = document.querySelector('.requirement-input');
 const riskHighlight = document.querySelector('.risk-highlight');
 const impactColumns = document.querySelector('.impact-columns');
+const codeBlock = document.querySelector('.code-citation');
 
 // Initialize animations
 const initializeAnimations = () => {
@@ -63,13 +64,19 @@ const initializeAnimations = () => {
         setTimeout(() => {
             impactColumns.style.opacity = '1';
             impactColumns.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                codeBlock.classList.add('auto-hover');
+                setTimeout(() => {
+                    codeBlock.classList.remove('auto-hover');
+                }, 2000);
+            }, 800);
         }, ANIMATION_CONFIG.requirementPreview.riskDelay);
     }, ANIMATION_CONFIG.requirementPreview.initialDelay);
 };
 
 // Start animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initializeAnimations();
+    // initializeAnimations();
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
 }); 

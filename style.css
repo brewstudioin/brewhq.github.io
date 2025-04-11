@@ -18,6 +18,7 @@ body {
     color: #ffffff;
     margin-top: 60px;
 }
+
 .legend-text {
     flex: 1;
     display: flex;
@@ -79,6 +80,11 @@ h2 {
     font-weight: 600;
 }
 
+button {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -134,7 +140,7 @@ input[type="email"]::placeholder {
 }
 
 p, li {
-    font-size: clamp(1em, 3vw, 1.2em);
+    /* font-size: clamp(1em, 3vw, 1.2em); */
     line-height: 1.5;
     margin: 10px 0px;
     color: rgba(255, 255, 255, 0.8);
@@ -191,6 +197,8 @@ p, li {
     flex-direction: column;
     align-items: center;
     backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
 }
 
 ul {
@@ -200,7 +208,7 @@ ul {
 
 ul li {
     margin: 10px 0px;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
 }
 
 .list-grid-wrapper {
@@ -862,8 +870,15 @@ header.visible {
     cursor: help;
     color: #53D3D1;
     font-size: 0.7em;
+    text-align: left;
     margin-left: 2px;
-    z-index: 1001;
+    z-index: 9999;
+}
+
+.auto-hover::before {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-79%) !important;
 }
 
 .code-citation::before {
@@ -883,7 +898,7 @@ header.visible {
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
-    z-index: 1002;
+    z-index: 9999;
     min-width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -905,7 +920,7 @@ header.visible {
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
-    z-index: 1002;
+    z-index: 9999;
 }
 
 .code-citation:hover::after {

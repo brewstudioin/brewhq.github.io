@@ -12,20 +12,20 @@
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <img src="assets/logo.svg" alt="Brew Logo">
+                <img src="assets/logo-pink.svg" alt="Brew Logo">
                 <h1 style="color: #ffffff;">Brew</h1>
             </div>
             <nav class="header-nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="https://brewstudio.in/blogs/">Blog</a>
+                <a href="https://brewstudio.in/blogs/" target="_blank">Blog</a>
             </nav>
         </div>
     </header>
     <section style="display: flex; margin: 20px 0px;" class="flex-direction">
         <div class="legend-text flex-center text-center">
             <div class="main-heading-container" style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-                <img src="assets/logo.svg" alt="Brew Logo" style="height: 95px; width: 95px; object-fit: contain; display: block;">
+                <img src="assets/logo-pink.svg" alt="Brew Logo" style="height: 95px; width: 95px; object-fit: contain; display: block;">
                 <h1 style="font-family: 'Titillium Web'">Brew your Requirements with Confidence</h1>
             </div>
             <h2>Unleash AI-driven Requirement Analysis so consequences of every change is crystal clear.</h2>
@@ -46,19 +46,20 @@
                 <div class="risk-highlight">
                     <div class="risk-content">
                         <span class="risk-label">⚠️ Risk:</span>
-                        <span>Code may not be delivered in time through SMS</span>
+                        <span>Delivery channel's setup could lead to a potential breach</span>
                         <span class="risk-badge">moderate</span>
                     </div>
                     <div class="mitigation-content">
                         <span class="mitigation-label">✓ Mitigation:</span>
-                        <span>This could be avoided when the user requests the system to 'Resend Code'.</span>
+                        <span>This could be avoided by ensuring that user sets up the channel through their account settings.</span>
                     </div>
                 </div>
                 <div class="impact-columns">
                     <div class="impact-column">
                         <h3>UI/UX</h3>
                         <ul>
-                            <li>Add 'Resend Code' button<sup class="code-citation" data-code="function handleResendCode() {
+                            <li>Add 'Resend Code' button<sup class="code-citation" data-code="// client/src/pages/login.tsx
+function handleResendCode() {
     const phoneNumber = document.getElementById('phoneInput').value;
     if (!phoneNumber) {
         showError('Please enter a valid phone number');
@@ -81,9 +82,16 @@
                     <div class="impact-column">
                         <h3>Data Source</h3>
                         <ul>
-                            <li>User database schema</li>
-                            <li>Session management</li>
-                            <li>Analytics tracking</li>
+                            <li>Ensure transaction isolation</li>
+                            <li>Add OTP field to the user model<sup class="code-citation" data-code="// app/models/user.py
+class User(Base):
+    __tablename__ = 'users'
+
+    user_id: Mapped[int] = mapped_column(primary_key=True)
+    email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    password: Mapped[str] = mapped_column(String(255), nullable=False)
+">2</sup></li>
+                            <li>Run related migrations</li>
                         </ul>
                     </div>
                 </div>
