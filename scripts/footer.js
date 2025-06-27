@@ -1,3 +1,4 @@
+// function to send beta signup to slack channel
 async function sendToSlack() {
     const email = document.getElementById('emailInput').value;
     
@@ -7,6 +8,7 @@ async function sendToSlack() {
         return;
     }
 
+    // Send to Slack through the registered webhook url
     const webhookUrl = 'https://hook.eu1.make.com/gosxltu18ivikoeunwxjs5gaotjywigi';
     try {
         const response = await fetch(webhookUrl, {
@@ -19,9 +21,10 @@ async function sendToSlack() {
             })
         });
 
+        // if response is ok, show success message and clear input
         if (response.ok) {
             alert('Thank you for joining the waitlist!');
-            document.getElementById('emailInput').value = ''; // Clear input
+            document.getElementById('emailInput').value = '';
         } else {
             throw new Error('Failed to send message');
         }
