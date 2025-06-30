@@ -21,6 +21,7 @@ async function sendToSlack() {
             })
         });
 
+        // if response is ok, show success message and clear input
         if (response.ok) {
             alert('Thank you for joining the waitlist!');
             document.getElementById('emailInput').value = '';
