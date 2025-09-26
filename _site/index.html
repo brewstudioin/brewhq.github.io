@@ -1,14 +1,65 @@
----
-layout: default
-title: "Brew | Cut development time"
-description: "Cut development time: AI that boosts team velocity and predictability. No more goldfish memory—get clear requirements, surface dependencies, and dev-ready implementation plans."
-section: home
-slug: home
----
-<section style="display: flex; margin: 20px 0px;" class="flex-direction">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew | Cut development time</title>
+    <meta name="description" content="Cut development time: AI that boosts team velocity and predictability. No more goldfish memory—get clear requirements, surface dependencies, and dev-ready implementation plans.">
+    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/assets/favico.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Brew | AI-driven Requirements Analysis & Impact Mapping">
+    <meta property="og:description" content="Unleash AI-driven requirement analysis so consequences of every change are clear.">
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:image" content="http://localhost:4000/assets/logo-color.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brew | AI-driven Requirements Analysis & Impact Mapping">
+    <meta name="twitter:description" content="No surprises. No guesswork. Just smooth delivery.">
+    <meta name="twitter:image" content="http://localhost:4000/assets/logo-color.svg">
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Organization",
+          "name":"Brew",
+          "url":"http://localhost:4000/",
+          "logo":"http://localhost:4000/assets/logo.svg",
+          "sameAs":[
+            "https://blog.brewstudio.in/",
+            "https://app.brewstudio.in/",
+            "https://brewhq.in/"
+          ]
+        }
+    </script>
+</head>
+<body class="">
+    <header>
+    <div class="header-container">
+        <div class="header-logo">
+            <img src="/assets/logo-pink.svg" alt="Brew Logo">
+            <span style="color: #ffffff;">Brew</span>
+        </div>
+        <nav class="header-nav" aria-label="Primary">
+            <a href="/" aria-current="page">Home</a>
+            <a href="/product/impact-analysis/" >Product</a>
+            <a href="/solutions/product-managers-analysts/" >Solutions</a>
+            <a href="/pricing/" >Pricing</a>
+            <a href="https://blog.brewstudio.in/blogs/" target="_blank" rel="noopener noreferrer">Blog</a>
+            <a href="https://app.brewstudio.in/login" target="_blank" rel="noopener noreferrer">Log In</a>
+            <a href="https://app.brewstudio.in/signup" target="_blank" rel="noopener noreferrer">Sign Up</a>
+        </nav>
+    </div>
+</header>
+
+
+    <main>
+        <section style="display: flex; margin: 20px 0px;" class="flex-direction">
     <div class="legend-text flex-center text-center">
         <div class="main-heading-container" style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-            <img src="{{ '/assets/logo-pink.svg' | relative_url }}" alt="Brew Logo" width="95" height="95" style="height: 95px; width: 95px; object-fit: contain; display: block;">
+            <img src="/assets/logo-pink.svg" alt="Brew Logo" width="95" height="95" style="height: 95px; width: 95px; object-fit: contain; display: block;">
             <h1 style="font-family: 'Titillium Web'">Cut development time</h1>
         </div>
         <h2>AI that boosts team velocity and predictability.</h2>
@@ -65,7 +116,7 @@ slug: home
             </div>
         </div>
         <div class="cta-buttons">
-            <a class="button cta-button" href="{{ '/pricing/' | relative_url }}">Try Now</a>
+            <a class="button cta-button" href="/pricing/">Try Now</a>
             <a class="button cta-button" href="#how-it-works">How it works</a>
         </div>
     </div>
@@ -120,17 +171,17 @@ slug: home
                 <div class="impact-column">
                     <h3>Requirement Impact</h3>
                     <p>Predict the blast radius; uncover dependencies early.</p>
-                    <div class="cta-buttons"><a class="button cta-button" href="{{ '/product/impact-analysis/' | relative_url }}">Learn more</a></div>
+                    <div class="cta-buttons"><a class="button cta-button" href="/product/impact-analysis/">Learn more</a></div>
                 </div>
                 <div class="impact-column">
                     <h3>Implementation Plans</h3>
                     <p>Get implementation ready in minutes—tasks, dependencies, ACs, estimates.</p>
-                    <div class="cta-buttons"><a class="button cta-button" href="{{ '/product/implementation-plans/' | relative_url }}">Learn more</a></div>
+                    <div class="cta-buttons"><a class="button cta-button" href="/product/implementation-plans/">Learn more</a></div>
                 </div>
                 <div class="impact-column">
                     <h3>Integrations</h3>
                     <p>Meet your existing stack: Jira, Slack, GitHub.</p>
-                    <div class="cta-buttons"><a class="button cta-button" href="{{ '/product/integrations/' | relative_url }}">Learn more</a></div>
+                    <div class="cta-buttons"><a class="button cta-button" href="/product/integrations/">Learn more</a></div>
                 </div>
             </div>
         </div>
@@ -145,6 +196,28 @@ slug: home
             <div class="timeline-item"><div class="timeline-number">3</div><div class="timeline-content"><h3>Analyze impact</h3><p>Auto‑map dependencies across the stack; customize as needed.</p></div></div>
             <div class="timeline-item"><div class="timeline-number">4</div><div class="timeline-content"><h3>Generate the plan</h3><p>Development‑ready tasks; sync to Jira.</p></div></div>
         </div>
-        <div class="cta-buttons"><a class="button cta-button" href="{{ '/pricing/' | relative_url }}">Try Now</a></div>
+        <div class="cta-buttons"><a class="button cta-button" href="/pricing/">Try Now</a></div>
     </div>
 </section>
+
+    </main>
+
+    <footer>
+    <div class="footer-content">
+        <div class="legend-text-centered">
+            <p>Don't Let Hidden Dependencies Derail Your Next Release.
+Brew is the easiest, smartest way to keep your codebase healthy and your team moving forward.</p>
+            <div class="footer-form flex-direction">
+                <input type="email" id="emailInput" placeholder="Enter Email address" class="footer-input">
+                <button onclick="sendToSlack()" class="button footer-button">Join Waitlist</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script defer src="/scripts/footer.js"></script>
+    <script defer src="/scripts/typing.js"></script>
+    <script defer src="/scripts/animations.js"></script>
+</body>
+</html>

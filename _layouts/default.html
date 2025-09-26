@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}Brew | AI-driven Requirements & Impact Analysis{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Brew helps teams analyze requirement & related changes with AI, mapping impacts across UI, code, and data to avoid surprises and deliver quality code.{% endif %}">
+    <link rel="canonical" href="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}/{% endif %}">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/favico.png' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}Brew | AI-driven Requirements Analysis & Impact Mapping{% endif %}">
+    <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% else %}Unleash AI-driven requirement analysis so consequences of every change are clear.{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/assets/logo-color.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.twitter_title %}{{ page.twitter_title }}{% else %}Brew | AI-driven Requirements Analysis & Impact Mapping{% endif %}">
+    <meta name="twitter:description" content="{% if page.twitter_description %}{{ page.twitter_description }}{% else %}No surprises. No guesswork. Just smooth delivery.{% endif %}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/logo-color.svg">
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Organization",
+          "name":"Brew",
+          "url":"{{ site.url }}/",
+          "logo":"{{ site.url }}/assets/logo.svg",
+          "sameAs":[
+            "https://blog.brewstudio.in/",
+            "https://app.brewstudio.in/",
+            "https://brewhq.in/",
+            "https://brew.studio/"
+          ]
+        }
+    </script>
+</head>
+<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+    {% include header.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script defer src="{{ '/scripts/footer.js' | relative_url }}"></script>
+    <script defer src="{{ '/scripts/typing.js' | relative_url }}"></script>
+    <script defer src="{{ '/scripts/animations.js' | relative_url }}"></script>
+</body>
+</html>
