@@ -1,8 +1,0 @@
-name: Brew
-url: https://brewstudio.in
-plugins:
-  - jekyll-sitemap
-exclude:
-  - package.json
-  - package-lock.json
-permalink: pretty

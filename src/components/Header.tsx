@@ -1,0 +1,185 @@
+import React from "react";
+import { Button } from "./ui/button";
+import { 
+  NavigationMenu, 
+  NavigationMenuContent, 
+  NavigationMenuItem, 
+  NavigationMenuLink, 
+  NavigationMenuList, 
+  NavigationMenuTrigger 
+} from "./ui/navigation-menu";
+import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useRouter } from "./Router";
+
+export function Header() {
+  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
+  const { navigateTo } = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if we've scrolled past the hero section (more precise detection)
+      const scrollY = window.scrollY;
+      // Hero section is typically around 600-700px tall (py-20 + content + some buffer)
+      const heroHeight = Math.min(window.innerHeight * 0.7, 650); // Cap at 650px for better precision
+      setIsScrolledPastHero(scrollY > heroHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header className={`w-full bg-background/80 backdrop-blur-sm sticky top-0 z-50 relative transition-all duration-300 ${
+      isScrolledPastHero ? 'border-b border-border' : 'border-b border-transparent'
+    }`}>
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between relative z-10">
+        <div className="flex items-center space-x-8">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <button 
+              onClick={() => navigateTo('home')}
+              className="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-200"
+            >
+              Brew Studio
+            </button>
+          </div>
+          
+          {/* Navigation Menu */}
+          <NavigationMenu className="hidden md:block">
+            <NavigationMenuList className="flex items-center space-x-2">
+              
+              {/* Product Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors bg-transparent hover:bg-accent/10 px-4 py-2 rounded-md">
+                  Product
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="min-w-[280px] p-4 bg-background border border-border rounded-lg shadow-lg">
+                  <div className="space-y-3">
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('impact-analysis')}
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">Impact maps</div>
+                          <div className="text-sm text-muted-foreground">Analyze requirements and dependencies</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('implementation-plans')}
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">Implementation Plans</div>
+                          <div className="text-sm text-muted-foreground">Step-by-step development plans</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('integrations')}
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">Integrations</div>
+                          <div className="text-sm text-muted-foreground">Connect with your tools</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('variance')}
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">Variance</div>
+                          <div className="text-sm text-muted-foreground">Track project deviation</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Solutions Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors bg-transparent hover:bg-accent/10 px-4 py-2 rounded-md">
+                  Solutions
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="min-w-[280px] p-4 bg-background border border-border rounded-lg shadow-lg">
+                  <div className="space-y-3">
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('product-managers')}
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">For Product Managers</div>
+                          <div className="text-sm text-muted-foreground">Turn requirements into clear plans</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('engineering-managers')} 
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">For Engineering Managers</div>
+                          <div className="text-sm text-muted-foreground">Boost team velocity and predictability</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <button 
+                        onClick={() => navigateTo('developers')} 
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">For Developers</div>
+                          <div className="text-sm text-muted-foreground">Get context-rich implementation plans</div>
+                        </div>
+                      </button>
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Pricing Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <button 
+                    onClick={() => navigateTo('pricing')}
+                    className="text-foreground hover:text-primary transition-colors bg-transparent hover:bg-accent/10 px-4 py-2 rounded-md font-medium"
+                  >
+                    Pricing
+                  </button>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+
+
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+        
+        <div className="flex items-center space-x-4">
+          <Button variant="ghost" className="text-foreground hover:text-primary hover:scale-105 transition-all duration-200">
+            Log In
+          </Button>
+          <Button 
+            className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+            onClick={() => window.open('https://app.brewstudio.in/signup', '_blank')}
+          >
+            Book a Demo
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+}
