@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { SEO } from "./components/SEO";
 import { Header } from "./components/Header";
 import { HomePage } from "./components/HomePage";
