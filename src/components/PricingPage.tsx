@@ -515,7 +515,7 @@ export function PricingPage() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-3 hover:scale-105 transition-all duration-200 text-lg"
+                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-3 hover:scale-105 transition-all duration-200 text-lg bg-primary-foreground"
                 onClick={() => window.open('mailto:support@brewstudio.in', '_blank')}
               >
                 Contact Sales

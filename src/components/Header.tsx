@@ -166,7 +166,10 @@ export function Header() {
         </div>
         
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="text-foreground hover:text-primary hover:scale-105 transition-all duration-200">
+          <Button variant="ghost" 
+            className="text-foreground hover:text-primary hover:scale-105 transition-all duration-200"
+            onClick={() => window.open('https://app.brewstudio.in/login', '_blank')}
+          >
             Log In
           </Button>
           <Button 

@@ -15,11 +15,13 @@ import { AboutUsPage } from "./components/AboutUsPage";
 import { PricingPage } from "./components/PricingPage";
 import { Footer } from "./components/Footer";
 import { FloatingShapes } from "./components/FloatingShapes";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-background">
       <FloatingShapes />
+      <ScrollToTop />
       <Header />
       <main>
         <Routes>

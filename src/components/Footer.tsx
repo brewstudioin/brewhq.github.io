@@ -25,7 +25,7 @@ export function Footer() {
   ];
 
   const companyLinks: NavLink[] = [
-    { label: "Blog", href: "#blog" },
+    { label: "Blog", href: "https://blog.brewstudio.in" },
     { label: "About us", page: "about" }
   ];
 
@@ -80,6 +80,8 @@ export function Footer() {
                     ) : (
                       <a 
                         href={link.href} 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group"
                       >
                         {link.label}
@@ -118,6 +120,8 @@ export function Footer() {
                     ) : (
                       <a 
                         href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group"
                       >
                         {link.label}
@@ -146,6 +150,8 @@ export function Footer() {
                     ) : (
                       <a 
                         href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group"
                       >
                         {link.label}
