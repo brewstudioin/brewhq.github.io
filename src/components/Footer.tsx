@@ -1,28 +1,32 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-import { useRouter } from "./Router";
+import { Mail, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { navigateTo } = useRouter();
 
-  const productLinks = [
-    { label: "Impact maps", href: "#impact-analysis", page: "impact-analysis" as const },
-    { label: "Implementation Plans", href: "#implementation-plans", page: "implementation-plans" as const },
-    { label: "Integrations", href: "#integrations", page: "integrations" as const },
-    { label: "Variance", href: "#variance", page: "variance" as const }
+  type PageLink = { label: string; page: string; href?: never };
+  type ExternalLink = { label: string; href: string; page?: never };
+  type NavLink = PageLink | ExternalLink;
+
+  const productLinks: NavLink[] = [
+    { label: "Impact maps", page: "impact-analysis" },
+    { label: "Implementation Plans", page: "implementation-plans" },
+    { label: "Integrations", page: "integrations" },
+    { label: "Variance", page: "variance" }
   ];
 
-  const solutionLinks = [
-    { label: "For Product Managers", href: "#product-managers", page: "product-managers" as const },
-    { label: "For Engineering Managers", href: "#engineering-managers", page: "engineering-managers" as const },
-    { label: "For Developers", href: "#developers", page: "developers" as const }
+  const solutionLinks: NavLink[] = [
+    { label: "For Product Managers", page: "product-managers" },
+    { label: "For Engineering Managers", page: "engineering-managers" },
+    { label: "For Developers", page: "developers" }
   ];
 
-  const companyLinks = [
+  const companyLinks: NavLink[] = [
     { label: "Blog", href: "#blog" },
-    { label: "About us", href: "#about", page: "about" as const }
+    { label: "About us", page: "about" }
   ];
 
   return (
@@ -35,12 +39,12 @@ export function Footer() {
             {/* Company Info & CTA */}
             <div>
               <div className="mb-6">
-                <button 
-                  onClick={() => navigateTo('home')}
+                <Link 
+                  to="/"
                   className="text-xl font-medium mb-4 text-left hover:text-accent transition-colors duration-200 cursor-pointer"
                 >
                   Brew Studio
-                </button>
+                </Link>
                 <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
                   AI-powered tool that helps development teams boost velocity and predictability by analyzing requirements, surfacing dependencies, and generating implementation plans.
                 </p>
@@ -63,16 +67,16 @@ export function Footer() {
             <div>
               <h4 className="font-medium mb-4">Company</h4>
               <ul className="space-y-3">
-                {companyLinks.map((link, index) => (
+                {companyLinks.map((link: NavLink, index) => (
                   <li key={index}>
-                    {link.page ? (
-                      <button 
-                        onClick={() => navigateTo(link.page)}
+                    {"page" in link ? (
+                      <Link 
+                        to={`/${link.page}`}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group text-left w-full"
                       >
                         {link.label}
                         <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-1">→</span>
-                      </button>
+                      </Link>
                     ) : (
                       <a 
                         href={link.href} 
@@ -101,37 +105,23 @@ export function Footer() {
             <div>
               <h4 className="font-medium mb-4">Product</h4>
               <ul className="space-y-3">
-                {productLinks.map((link, index) => (
+                {productLinks.map((link: NavLink, index) => (
                   <li key={index}>
-                    {link.page ? (
-                      <button 
-                        onClick={() => navigateTo(link.page)}
+                    {"page" in link ? (
+                      <Link 
+                        to={`/${link.page}`}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group text-left w-full"
                       >
                         {link.label}
-                        {link.comingSoon && (
-                          <span className="text-xs bg-accent/20 text-accent-foreground px-2 py-1 rounded-full ml-2">
-                            Soon
-                          </span>
-                        )}
-                        {!link.comingSoon && (
-                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-1">→</span>
-                        )}
-                      </button>
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-1">→</span>
+                      </Link>
                     ) : (
                       <a 
-                        href={link.href} 
+                        href={link.href}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group"
                       >
                         {link.label}
-                        {link.comingSoon && (
-                          <span className="text-xs bg-accent/20 text-accent-foreground px-2 py-1 rounded-full ml-2">
-                            Soon
-                          </span>
-                        )}
-                        {!link.comingSoon && (
-                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-1">→</span>
-                        )}
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-1">→</span>
                       </a>
                     )}
                   </li>
@@ -143,19 +133,19 @@ export function Footer() {
             <div>
               <h4 className="font-medium mb-4">Solutions</h4>
               <ul className="space-y-3">
-                {solutionLinks.map((link, index) => (
+                {solutionLinks.map((link: NavLink, index) => (
                   <li key={index}>
-                    {link.page ? (
-                      <button 
-                        onClick={() => navigateTo(link.page)}
+                    {"page" in link ? (
+                      <Link 
+                        to={`/${link.page}`}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group text-left w-full"
                       >
                         {link.label}
                         <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-1">→</span>
-                      </button>
+                      </Link>
                     ) : (
                       <a 
-                        href={link.href} 
+                        href={link.href}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group"
                       >
                         {link.label}

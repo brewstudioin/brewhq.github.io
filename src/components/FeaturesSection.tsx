@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { useRouter } from "./Router";
+import { useNavigate } from "react-router-dom";
 
 export function FeaturesSection() {
-  const { navigateTo } = useRouter();
+  const navigate = useNavigate();
   
   const features = [
     {
@@ -84,11 +84,11 @@ export function FeaturesSection() {
                   <Button 
                     onClick={() => {
                       if (feature.id === 'impact') {
-                        navigateTo('impact-analysis');
+                        navigate('/impact-analysis');
                       } else if (feature.id === 'plans') {
-                        navigateTo('implementation-plans');
+                        navigate('/implementation-plans');
                       } else if (feature.id === 'integrations') {
-                        navigateTo('integrations');
+                        navigate('/integrations');
                       }
                     }}
                     className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"

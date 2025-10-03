@@ -10,11 +10,10 @@ import {
 } from "./ui/navigation-menu";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useRouter } from "./Router";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
-  const { navigateTo } = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,15 +37,13 @@ export function Header() {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between relative z-10">
         <div className="flex items-center space-x-8">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <button 
-              onClick={() => navigateTo('home')}
-              className="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-200"
-            >
-              Brew Studio
-            </button>
-          </div>
-          
+          <Link 
+            to="/"
+            className="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-200 flex items-center space-x-3"
+          >
+            <img src="/src/assets/logo_brand.png" alt="Brew Studio" className="w-8 h-8" />
+            Brew Studio
+          </Link>
           {/* Navigation Menu */}
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList className="flex items-center space-x-2">
@@ -59,48 +56,48 @@ export function Header() {
                 <NavigationMenuContent className="min-w-[280px] p-4 bg-background border border-border rounded-lg shadow-lg">
                   <div className="space-y-3">
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('impact-analysis')}
+                      <Link 
+                        to="/impact-analysis"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">Impact maps</div>
                           <div className="text-sm text-muted-foreground">Analyze requirements and dependencies</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('implementation-plans')}
+                      <Link 
+                        to="/implementation-plans"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">Implementation Plans</div>
                           <div className="text-sm text-muted-foreground">Step-by-step development plans</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('integrations')}
+                      <Link 
+                        to="/integrations"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">Integrations</div>
                           <div className="text-sm text-muted-foreground">Connect with your tools</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('variance')}
+                      <Link 
+                        to="/variance"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">Variance</div>
                           <div className="text-sm text-muted-foreground">Track project deviation</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
@@ -114,37 +111,37 @@ export function Header() {
                 <NavigationMenuContent className="min-w-[280px] p-4 bg-background border border-border rounded-lg shadow-lg">
                   <div className="space-y-3">
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('product-managers')}
+                      <Link 
+                        to="/product-managers"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">For Product Managers</div>
                           <div className="text-sm text-muted-foreground">Turn requirements into clear plans</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('engineering-managers')} 
+                      <Link 
+                        to="/engineering-managers" 
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">For Engineering Managers</div>
                           <div className="text-sm text-muted-foreground">Boost team velocity and predictability</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <button 
-                        onClick={() => navigateTo('developers')} 
+                      <Link 
+                        to="/developers" 
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">For Developers</div>
                           <div className="text-sm text-muted-foreground">Get context-rich implementation plans</div>
                         </div>
-                      </button>
+                      </Link>
                     </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
@@ -153,12 +150,12 @@ export function Header() {
               {/* Pricing Link */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <button 
-                    onClick={() => navigateTo('pricing')}
+                  <Link 
+                    to="/pricing"
                     className="text-foreground hover:text-primary transition-colors bg-transparent hover:bg-accent/10 px-4 py-2 rounded-md font-medium"
                   >
                     Pricing
-                  </button>
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 

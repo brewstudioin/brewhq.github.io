@@ -1,13 +1,11 @@
 
-  # Improve Screenshot Representation
+# Brew.studio landing
 
-  This is a code bundle for Improve Screenshot Representation. The original project is available at https://www.figma.com/design/Am0mIwamk0RtgIKx7FMlq7/Improve-Screenshot-Representation.
+## Running the code
 
-  ## Running the code
+Run `npm i` to install the dependencies.
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
+Run `npm run dev` to start the development server.
 
 ## Deploying to GitHub Pages
 
