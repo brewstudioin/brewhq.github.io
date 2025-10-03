@@ -8,9 +8,9 @@ import {
   NavigationMenuList, 
   NavigationMenuTrigger 
 } from "./ui/navigation-menu";
-import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+const logoBrand = new URL('../assets/logo_brand.png', import.meta.url).href;
 
 export function Header() {
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
@@ -41,7 +41,7 @@ export function Header() {
             to="/"
             className="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-200 flex items-center space-x-3"
           >
-            <img src="/src/assets/logo_brand.png" alt="Brew Studio" className="w-8 h-8" />
+            <img src={logoBrand} alt="Brew Studio" className="w-8 h-8" />
             Brew Studio
           </Link>
           {/* Navigation Menu */}
