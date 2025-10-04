@@ -15,6 +15,8 @@ import { PricingPage } from "./components/PricingPage";
 import { Footer } from "./components/Footer";
 import { FloatingShapes } from "./components/FloatingShapes";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage";
+import { SubprocessorPage } from "./components/SubprocessorPage";
 
 export default function App() {
   return (
@@ -151,6 +153,32 @@ export default function App() {
                   path="/pricing"
                 />
                 <PricingPage />
+              </>
+            }
+          />
+          <Route
+            path="/legal/subprocessor"
+            element={
+              <>
+                <SEO 
+                  title="Subprocessors | Brew Studio"
+                  description="List of Brew Studio’s third‑party subprocessors and related FAQs."
+                  path="/legal/subprocessor"
+                />
+                <SubprocessorPage />
+              </>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <>
+                <SEO 
+                  title="Privacy Policy | Brew Studio"
+                  description="How Brew Studio collects, uses, and protects your data."
+                  path="/privacy-policy"
+                />
+                <PrivacyPolicyPage />
               </>
             }
           />
