@@ -31,8 +31,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Brew Studio | Boost Engineering Velocity & Predictability"
-                  description="AI-powered tool that helps development teams boost velocity and predictability by analyzing requirements, surfacing dependencies, and generating implementation plans."
+                  title="Raise Velocity with Context | Brew Studio"
+                  description="Turn requirements into impact analysis and development-ready plans. Cut rework, reduce cycle time, and ship predictably."
                   path="/"
                 />
                 <HomePage />
@@ -44,8 +44,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Impact Maps | Brew Studio"
-                  description="Analyze requirement dependencies, risks, and blast radius to prevent scope creep and delays."
+                  title="Full-Stack Impact Analysis for Teams | Brew Studio"
+                  description="Map dependencies, flag risks, and export impact summaries to Jira. Reduce rework and slips."
                   path="/impact-analysis"
                 />
                 <ImpactAnalysisPage />
@@ -57,8 +57,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Implementation Plans | Brew Studio"
-                  description="Generate step-by-step tasks with dependencies, estimates, and acceptance criteria in minutes."
+                  title="Clear Plans for Devs & AI Agents | Brew Studio"
+                  description="Turn requirements into development-ready tasks with estimates. Cut rework, speed handoffs, and ship sustainably."
                   path="/implementation-plans"
                 />
                 <ImplementationPlansPage />
@@ -70,8 +70,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Integrations | Brew Studio"
-                  description="Connect with Jira, Slack, GitHub and more to fit your existing workflow."
+                  title="Integrations: Jira, Slack & GitHub | Brew Studio"
+                  description="Plug Brew Studio into Jira, Slack, and GitHub to keep context intact from requirement to code. Roadmap: VS Code and agent adapters."
                   path="/integrations"
                 />
                 <IntegrationsPage />
@@ -83,8 +83,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Variance Tracking | Brew Studio"
-                  description="Track project deviation and keep delivery on target with actionable insights."
+                  title="Variance: Requirement-vs-Code Guardrails | Brew Studio"
+                  description="Continuous checks compare code to requirements and ACs, flagging discrepancies and opening follow-ups so teams fix issues fast."
                   path="/variance"
                 />
                 <VariancePage />
@@ -96,8 +96,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="For Product Managers | Brew Studio"
-                  description="Turn requirements into crisp implementation plans with clarity and confidence."
+                  title="Product Managers: Align & Ship Faster | Brew Studio"
+                  description="Turn messy specs into clear impact maps and plans with ACs and estimates. Sync to Jira and reduce review cycles."
                   path="/product-managers"
                 />
                 <ProductManagersPage />
@@ -109,8 +109,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="For Engineering Managers | Brew Studio"
-                  description="Increase team velocity, reduce surprises, and improve predictability."
+                  title="Predictable Velocity for Engineering | Brew Studio"
+                  description="Protect velcoity with impact-aware planning. Reduce rework, improve estimates and quality, and ship on schedule with fewer surprises"
                   path="/engineering-managers"
                 />
                 <EngineeringManagersPage />
@@ -122,8 +122,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="For Developers | Brew Studio"
-                  description="Get context-rich, dependency-aware implementation plans to ship faster."
+                  title="Clear Requirements for Developers | Brew Studio"
+                  description="Turn requirements into executable plans. Fewer unknowns, cleaner reviews, and faster merges."
                   path="/developers"
                 />
                 <DevelopersPage />
@@ -136,7 +136,7 @@ export default function App() {
               <>
                 <SEO 
                   title="About Brew Studio"
-                  description="Learn about the team and mission behind Brew Studio."
+                  description="Our mission: remove chaos from software delivery. We craft tools for improving engineering teams' productivity."
                   path="/about"
                 />
                 <AboutUsPage />
@@ -148,8 +148,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Pricing | Brew Studio"
-                  description="Simple pricing to get started quickly with Brew Studio."
+                  title="Brew Studio Pricing — Start Free"
+                  description="Choose Free, Starter, or Enterprise. Impact analysis, plans, and integrations. Add projects and repos as you grow."
                   path="/pricing"
                 />
                 <PricingPage />
