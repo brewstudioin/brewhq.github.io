@@ -1,4 +1,5 @@
-import { CheckCircle, Search, Settings, FileText, Link } from "lucide-react";
+import React from "react";
+import { Search, Settings, FileText, Link } from "lucide-react";
 
 export function BrewWaySection() {
   const features = [

@@ -1,3 +1,4 @@
+import React from "react";
 import { SolutionsPageTemplate } from "./SolutionsPageTemplate";
 import { Zap, Clock, FileText, AlertTriangle, Play, Eye, RefreshCw, AlertCircle } from "lucide-react";
 

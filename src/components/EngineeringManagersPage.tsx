@@ -1,3 +1,4 @@
+import React from "react";
 import { SolutionsPageTemplate } from "./SolutionsPageTemplate";
 import { Target, RotateCcw, CheckCircle2, Shield, Eye, ClipboardCheck, TrendingUp, AlertCircle } from "lucide-react";
 

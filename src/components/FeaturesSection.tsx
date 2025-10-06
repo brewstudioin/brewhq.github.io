@@ -57,17 +57,17 @@ export function FeaturesSection() {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="impact" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-12 bg-secondary/40 h-auto rounded-xl">
+            <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 gap-3 mb-12 bg-secondary/40 h-auto rounded-xl">
               {features.map((feature) => (
                 <TabsTrigger 
                   key={feature.id} 
                   value={feature.id}
-                  className="flex items-center space-x-3 py-4 px-6 data-[state=active]:bg-card data-[state=active]:text-foreground text-base font-medium data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105 relative group rounded-lg"
+                  className="flex items-center justify-start md:justify-center gap-2 md:gap-3 py-3 md:py-4 px-4 md:px-6 w-full data-[state=active]:bg-card data-[state=active]:text-foreground text-sm md:text-base font-medium data-[state=active]:shadow-lg transition-all duration-300 hover:scale-105 relative group rounded-lg"
                 >
                   <div className="w-6 h-6 flex items-center justify-center transition-transform duration-300">
                     {feature.shape}
                   </div>
-                  <span className="text-lg font-semibold">{feature.title}</span>
+                  <span className="text-base md:text-lg font-semibold">{feature.title}</span>
                 </TabsTrigger>
               ))}
             </TabsList>

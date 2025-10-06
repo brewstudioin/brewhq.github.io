@@ -233,3 +233,13 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Lightweight fallbacks for missing responsive utilities when using prebuilt CSS */
+@media (width >= 48rem) {
+  .md\:hidden { display: none !important; }
+  .md\:flex { display: flex !important; }
+}
+
+@media (width >= 40rem) {
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
