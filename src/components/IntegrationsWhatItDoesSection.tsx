@@ -16,17 +16,18 @@ export function IntegrationsWhatItDoesSection() {
       status: "upcoming",
       description: "Share plans to channels/DMs for review and approvals.",
       features: [
-        "Notifications for plan updates, sign‑offs, and risk flags",
+        "Notifications for plan updates, sign-offs, and risk flags",
         "Slash actions - generate impact from a message thread"
       ]
     },
     {
       title: "GitHub",
-      status: "upcoming",
+      status: "available",
       description: "Code adjacency hints to surface likely repos/files from requirement terms.",
       features: [
         "PR context links so reviewers see impact + plan alongside diffs",
-        "Read‑only by default; no code writes"
+        "Read-only by default; no code writes",
+        "Auto-sync with Brew"
       ]
     }
   ];

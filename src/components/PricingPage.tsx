@@ -286,7 +286,7 @@ export function PricingPage() {
                     <th className="text-center py-4 px-6 font-medium text-foreground bg-accent/10">
                       <div className="relative">
                         Starter
-                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
+                        <div className="absolute left-1/2 transform -translate-x-1/2">
                           <span className="bg-accent text-accent-foreground px-2 py-1 rounded text-xs">
                             Popular
                           </span>
@@ -347,7 +347,7 @@ export function PricingPage() {
                   <tr className="border-b border-border hover:bg-secondary/20 transition-colors">
                     <td className="py-4 px-6 text-foreground font-medium">Connected repos (GitHub)</td>
                     <td className="py-4 px-6 text-center text-foreground">1</td>
-                    <td className="py-4 px-6 text-center text-foreground bg-accent/5">1 for each project</td>
+                    <td className="py-4 px-6 text-center text-foreground bg-accent/5">2 for each project</td>
                     <td className="py-4 px-6 text-center text-foreground">25 (expandable)</td>
                   </tr>
                   <tr className="border-b border-border hover:bg-secondary/20 transition-colors">

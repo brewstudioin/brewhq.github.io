@@ -86,11 +86,11 @@ export function EngineeringManagersPage() {
       faqs={[
         {
           question: "I am hesitent to give access to my code, is it safe?",
-          answer: "Yes. You only permit Brew to with read access to your code. It's for generating context that aids planning in the future. We store related embeddings securely in a opensearch instance that is only accessible through compute instances in a private VPC. We also have multiple security controls in place, like, tokenization, encryption at rest, psedonimization, etc. If this does not satisfy you still, you can connect with us for a fully managed database solution where you will own the infra for storing your data."
+          answer: "Yes. You only permit Brew with read access to your code. It's for generating context that aids planning in the future. We store related embeddings securely in an opensearch instance that is only accessible through compute instances in a private VPC. We also have multiple security controls in place, like, tokenization, encryption at rest, psedonimization, etc. If this does not satisfy you still, you can connect with us for a fully managed database solution where you will own the infra for storing your data."
         },
         {
           question: "Do we need to change our SDLC?",
-          answer: "No; Brew fits well into your own engineering rituals. You can use it independently to Analyze your requirements and is also good at keeping track of incomming changes. This way you as an engineering manager can keep track of the overaching goals of your org."
+          answer: "No; Brew fits well into your own engineering rituals. You can use it independently to Analyze your requirements and is also good at keeping track of incoming changes. This way you as an engineering manager can keep track of the overaching goals of your org."
         },
         {
           question: "Can we enforce governance?",
@@ -106,7 +106,7 @@ export function EngineeringManagersPage() {
         },
         {
           question: "What happens if my code repository is updated?",
-          answer: "Brew Studio automatically syncs with your repositories through a webhook to keep the context & vector embeddings up to date. This ensures that any future impact analysis is always accurate and relevant."
+          answer: "Brew Studio automatically syncs with your repositories through a webhook to keep the context & vector embeddings up to date. This ensures that any future impact analysis is always accurate and relevant. If you delete a repo in Brew studio, we will cleanup the related webhook automatically for you."
         }
       ]}
     />

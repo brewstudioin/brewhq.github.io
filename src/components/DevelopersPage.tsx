@@ -99,6 +99,10 @@ export function DevelopersPage() {
         {
           question: "Does this replace Jira?",
           answer: "No—Brew enriches tickets and syncs to Jira."
+        },
+        {
+          question: "What happens when I push new changes to my repository?",
+          answer: "Brew Studio automatically syncs with your repositories through a webhook to keep the context & vector embeddings up to date. This ensures that any future impact analysis is always accurate and relevant. If you delete a repo in Brew studio, we will cleanup the related webhook automatically for you."
         }
       ]}
     />
