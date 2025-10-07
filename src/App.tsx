@@ -17,6 +17,7 @@ import { FloatingShapes } from "./components/FloatingShapes";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage";
 import { SubprocessorPage } from "./components/SubprocessorPage";
+import { SecurityPage } from "./components/SecurityPage";
 
 export default function App() {
   return (
@@ -179,6 +180,19 @@ export default function App() {
                   path="/privacy-policy"
                 />
                 <PrivacyPolicyPage />
+              </>
+            }
+          />
+          <Route
+            path="/security"
+            element={
+              <>
+                <SEO 
+                  title="Security | Brew Studio"
+                  description="How Brew Studio secures your data and Developer Content: encryption, VPC networking, RBAC, AI data use, and more."
+                  path="/security"
+                />
+                <SecurityPage />
               </>
             }
           />

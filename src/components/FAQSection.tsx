@@ -10,31 +10,31 @@ export function FAQSection() {
   const faqs = [
     {
       question: "How is impact generated?",
-      answer: "For a requirement you generate, Brew Studio analyzes your codebase, other listed requirements, and system architecture to automatically map potential impact areas. Its done through a network of agents that are supplied with a set of varied tools which enable them to understand the dependency graph between requirements and code. With this context, it creates a matrix to show all impacted area and risks assiciated with them."
-    },
-    {
-      question: "Does BrewHQ change my code?",
-      answer: "No. You only permit Brew to with read access to your code. It's for generating context & vector embeddings that aids tool use & planning in the future. Brew Studio never modifies your code - it only provides analysis and insights to help you make informed decisions."
-    },
-    {
-      question: "Can I customise the impact and/or risk?",
-      answer: "Yes, add, edit or ignore as you wish. You have full control over the impact analysis - modify risk scores, add custom notes, ignore irrelevant dependencies, or include additional considerations based on your team's knowledge."
-    },
-    {
-      question: "Does BrewHQ need write access to GitHub?",
-      answer: "No, Brew Studio only requires read access to your repositories. This allows us to analyze your codebase structure and dependencies to generate context and vector embeddings without posing any risk to your code. You maintain complete control over your repositories. Brew studio also employees tokenization & encryption at rest to ensure the security of your data. Further with RBAC enabled, only you and your team members can access the data."
-    },
-    {
-      question: "What happens if my code repository is updated?",
-      answer: "Brew Studio automatically syncs with your repositories through a webhook to keep the context & vector embeddings up to date. This ensures that any future impact analysis is always accurate and relevant. If you delete a repo in Brew studio, we will cleanup the related webhook automatically for you."
-    },
-    {
-      question: "How is my data managed?",
-      answer: "When you delete anything in the data hierarchy, it & its children get deleted from the database. Projects are the top of hierarchy in Brew Studio. A project consists of 1 or more code repository, requirement documents and other integrations. Further, Every requirement document consists of impact analysis and related data. \n We retain backups for 30 days."
+      answer: "For each requirement, Brew Studio analyzes your codebase, related requirements, and system architecture using a network of specialized agents. These agents understand dependency relationships between requirements and code, then produce an impact matrix highlighting affected areas and associated risks."
     },
     {
       question: "What inputs are required for best results?",
-      answer: "For optimal impact analysis, just provide clear, specific requirements documentation & access to your codebase. The more context Brew Studio has about your system, the more accurate and comprehensive the impact analysis will be."
+      answer: "Provide clear, specific requirement documentation and grant read-only access to your codebase. More system context yields more accurate and comprehensive impact analysis."
+    },
+    {
+      question: "Can I customize impact and risk?",
+      answer: "Yes. You can add, edit, or ignore items as needed: adjust risk scores, add notes, exclude irrelevant dependencies, or include additional considerations based on your team's knowledge."
+    },
+    {
+      question: "Does BrewHQ change my code?",
+      answer: "No. You grant Brew Studio read-only access to your repositories to generate context and vector embeddings that support planning. Brew Studio never modifies your code; it provides analysis and insights only."
+    },
+    {
+      question: "Does BrewHQ need write access to GitHub?",
+      answer: "No. Brew Studio requires read-only access to analyze repository structure and dependencies to generate context and embeddings. You retain full control. We employ tokenization and encryption at rest, and RBAC ensures only authorized team members can access your data."
+    },
+    {
+      question: "What happens if my code repository is updated?",
+      answer: "Brew Studio keeps context and embeddings up to date via webhooks. Changes are synced automatically to keep future analyses accurate. If you remove a repository from Brew Studio, the related webhook is cleaned up automatically."
+    }, 
+    {
+      question: "How is my data managed?",
+      answer: "Brew Studio organizes data by projects. A project can include one or more repositories, requirement documents, and integrations. Deleting an item removes it and its children from the database. Backups are retained for 30 days."
     }
   ];
 

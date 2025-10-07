@@ -26,7 +26,8 @@ export function Footer() {
 
   const companyLinks: NavLink[] = [
     { label: "Blog", href: "https://blog.brewstudio.in" },
-    { label: "About us", page: "about" }
+    { label: "About us", page: "about" },
+    { label: "Security", page: "security" }
   ];
 
   return (
@@ -184,6 +185,12 @@ export function Footer() {
                 className="text-primary-foreground/80 hover:text-primary-foreground text-sm hover:scale-105 transition-all duration-200 hover:underline decoration-accent underline-offset-4"
               >
                 Privacy Policy
+              </a>
+              <a 
+                href="/security" 
+                className="text-primary-foreground/80 hover:text-primary-foreground text-sm hover:scale-105 transition-all duration-200 hover:underline decoration-accent underline-offset-4"
+              >
+                Security
               </a>
             </div>
           </div>
