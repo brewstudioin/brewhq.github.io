@@ -85,8 +85,12 @@ export function DevelopersPage() {
       }}
       faqs={[
         {
+          question: "I am hesitent to give access to my code, is it safe?",
+          answer: "Yes. You only permit Brew to with read access to your code. It's for generating context that aids planning in the future. We store related embeddings securely in a opensearch instance that is only accessible through compute instances in a private VPC. We also have multiple security controls in place, like, tokenization, encryption at rest, psedonimization, etc. If this does not satisfy you still, you can connect with us for a fully managed database solution where you will own the infra for storing your data."
+        },
+        {
           question: "Will Brew change my code?",
-          answer: "Never. It's context and planning, read‑only for code."
+          answer: "Never. You only permit Brew to with read access to your code. It's for generating context & vector embeddings that aids tool use & planning in the future."
         },
         {
           question: "How detailed are Acceptance Criteria?",

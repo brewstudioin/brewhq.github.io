@@ -14,15 +14,11 @@ export function IntegrationsFAQSection() {
     },
     {
       question: "Is GitHub access required?",
-      answer: "Yes, we read your code to generate the most accurate outputs."
+      answer: "Yes, we read your code to generate the most accurate outputs. Without this agent does have the source of truth to base its planning on."
     },
     {
       question: "Is there an API or webhooks for CICD/agents?",
-      answer: "Yes, we provide comprehensive API endpoints and webhook support for CI/CD pipelines and agent integrations."
-    },
-    {
-      question: "How are rate limits and retries handled?",
-      answer: "We implement intelligent rate limiting and automatic retry mechanisms with exponential backoff to ensure reliable operation."
+      answer: "Not currently, but the team would be happy to hear from you and build it."
     }
   ];
 

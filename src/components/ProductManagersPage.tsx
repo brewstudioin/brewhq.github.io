@@ -86,11 +86,11 @@ export function ProductManagersPage() {
       faqs={[
         {
           question: "Can stakeholders comment?",
-          answer: "Yes you can even sync your comments with JIRA."
+          answer: "Yes, you can even sync your comments with JIRA."
         },
         {
           question: "How does this fit sprint rituals?",
-          answer: "Use Brew in backlog grooming and Sprint pre‑planning."
+          answer: "Often teams get distracted by too many details and hence don't plan well. Use Brew in backlog grooming and Sprint pre-planning to understand task complexity before hand and have pre-set estimates created on demand for a more efficient sprint planning."
         }
       ]}
     />

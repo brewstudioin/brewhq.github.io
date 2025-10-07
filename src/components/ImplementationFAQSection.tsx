@@ -17,8 +17,8 @@ export function ImplementationFAQSection() {
       answer: "Derived from complexity/risk tags; you can edit, sync to JIRA."
     },
     {
-      question: "Do agents pull plans directly?",
-      answer: "You can share links with teammates or copy and paste where you want it."
+      question: "Can my coding agents pull plans directly?",
+      answer: "You can share links with teammates or copy and paste where you want it. We will soon introduce an MCP that can allow your agent to talk to brew directly."
     },
     {
       question: "What's the structure of a generated task, can we customise it?",

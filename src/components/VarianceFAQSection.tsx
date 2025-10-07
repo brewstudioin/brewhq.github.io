@@ -10,7 +10,7 @@ export function VarianceFAQSection() {
   const faqs = [
     {
       question: "What does Variance actually check?",
-      answer: "Variance continuously monitors your code changes against the approved implementation plan. It checks if commits and PRs match the defined impact map, validates that changes satisfy acceptance criteria, ensures tasks are implemented in the planned sequence, and flags any files modified outside the approved scope."
+      answer: "Variance continuously monitors your code changes against the approved impact analysis & implementation plan. It checks if commits and PRs match the defined impact map, validates that changes satisfy acceptance criteria, ensures tasks are implemented in the planned sequence, and flags any files modified outside the approved scope."
     },
     {
       question: "Will this spam us with alerts?",

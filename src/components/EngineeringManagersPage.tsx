@@ -85,8 +85,12 @@ export function EngineeringManagersPage() {
       }}
       faqs={[
         {
+          question: "I am hesitent to give access to my code, is it safe?",
+          answer: "Yes. You only permit Brew to with read access to your code. It's for generating context that aids planning in the future. We store related embeddings securely in a opensearch instance that is only accessible through compute instances in a private VPC. We also have multiple security controls in place, like, tokenization, encryption at rest, psedonimization, etc. If this does not satisfy you still, you can connect with us for a fully managed database solution where you will own the infra for storing your data."
+        },
+        {
           question: "Do we need to change our SDLC?",
-          answer: "No; Brew slots into grooming and planning."
+          answer: "No; Brew fits well into your own engineering rituals. You can use it independently to Analyze your requirements and is also good at keeping track of incomming changes. This way you as an engineering manager can keep track of the overaching goals of your org."
         },
         {
           question: "Can we enforce governance?",
@@ -94,7 +98,15 @@ export function EngineeringManagersPage() {
         },
         {
           question: "Security posture?",
-          answer: "Read‑only for code; granular OAuth; SSO on Business+."
+          answer: "We have multiple security controls in place, like, tokenization, encryption at rest, psedonimization, etc. You can read more about our privacy-policy here: https://brew.studio/privacy-policy"
+        },
+        {
+          question: "Does BrewHQ need write access to GitHub?",
+          answer: "No, Brew Studio only requires read access to your repositories. This allows us to analyze your codebase structure and dependencies to generate context and vector embeddings without posing any risk to your code. You maintain complete control over your repositories. Brew studio also employees tokenization & encryption at rest to ensure the security of your data. Further with RBAC enabled, only you and your team members can access the data."
+        },
+        {
+          question: "What happens if my code repository is updated?",
+          answer: "Brew Studio automatically syncs with your repositories through a webhook to keep the context & vector embeddings up to date. This ensures that any future impact analysis is always accurate and relevant."
         }
       ]}
     />
