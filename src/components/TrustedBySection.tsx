@@ -13,10 +13,10 @@ export function TrustedBySection() {
 
   const testimonials = [
     {
-      quote: "Brew transformed how we handle requirements. No more surprises halfway through sprints.",
-      author: "Sarah Chen",
-      role: "Engineering Manager",
-      company: "Stratocyte"
+      quote: "A huge help for developing apps and software. It breaks down requirements, finds dependencies early, and even suggests implementations which saves a lot of time. The impact analysis quickly shows what parts of the code might be affected by a change and reduces manual efforts to identify the same. Definitely a tool worth using",
+      author: "Siddhant Mahajani",
+      role: "Senior Engineer",
+      company: "Saadian"
     },
     {
       quote: "The dependency mapping alone saved us weeks of rework. Game changer for our team.",
