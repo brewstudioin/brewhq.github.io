@@ -2,22 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/">
-    <script>
-      sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
-      window.location.replace('/');
-    </script>
+    <title>404 Not Found</title>
   </head>
-  <body></body>
-  <script>
-    try {
-      const redirectPath = sessionStorage.getItem('redirect');
-      if (redirectPath && redirectPath !== '/') {
-        sessionStorage.removeItem('redirect');
-        window.history.replaceState(null, '', redirectPath);
-      }
-    } catch (e) {}
-  </script>
+  <body>
+    <h1>404 — Page Not Found</h1>
+  </body>
+  
 </html>
-
+ 
