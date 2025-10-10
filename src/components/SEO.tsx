@@ -12,7 +12,11 @@ const BASE_URL = "https://brew.studio";
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.svg`;
 
 export function SEO({ title, description, path, imageUrl }: SEOProps) {
-  const url = `${BASE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  let normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  if (normalizedPath !== '/' && !normalizedPath.endsWith('/')) {
+    normalizedPath = `${normalizedPath}/`;
+  }
+  const url = `${BASE_URL}${normalizedPath}`;
   const img = imageUrl || DEFAULT_IMAGE;
   return (
     <Helmet>

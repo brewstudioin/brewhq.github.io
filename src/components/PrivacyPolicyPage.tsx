@@ -183,7 +183,7 @@ export function PrivacyPolicyPage() {
         <li><strong>Professional services</strong> (legal, accounting) under confidentiality.</li>
         <li><strong>Change of control</strong> (merger/acquisition) with notice where required.</li>
       </ul>
-      <p className="mb-8">We maintain a <a className="underline" href="/legal/subprocessor"><strong>Subprocessors</strong></a> page and Data Processing Addendum (DPA) for customers upon request.</p>
+      <p className="mb-8">We maintain a <a className="underline" href="/legal/subprocessor/"><strong>Subprocessors</strong></a> page and Data Processing Addendum (DPA) for customers upon request.</p>
 
       <hr className="my-8" />
 

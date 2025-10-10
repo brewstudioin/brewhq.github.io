@@ -60,7 +60,7 @@ export function Header() {
                   <div className="space-y-3">
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/impact-analysis"
+                        to="/impact-analysis/"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -71,7 +71,7 @@ export function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/implementation-plans"
+                        to="/implementation-plans/"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -82,7 +82,7 @@ export function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/integrations"
+                        to="/integrations/"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -93,7 +93,7 @@ export function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/variance"
+                        to="/variance/"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -115,7 +115,7 @@ export function Header() {
                   <div className="space-y-3">
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/product-managers"
+                        to="/product-managers/"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -126,7 +126,7 @@ export function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/engineering-managers" 
+                        to="/engineering-managers/" 
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -137,7 +137,7 @@ export function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/developers" 
+                        to="/developers/" 
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
@@ -154,7 +154,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link 
-                    to="/pricing"
+                    to="/pricing/"
                     className="text-foreground hover:text-primary transition-colors bg-transparent hover:bg-accent/10 px-4 py-2 rounded-md font-medium"
                   >
                     Pricing
@@ -208,16 +208,16 @@ export function Header() {
                   <div className="text-muted-foreground text-sm uppercase">Product</div>
                   <nav className="flex flex-col">
                     <SheetClose asChild>
-                      <Link to="/impact-analysis" className="px-2 py-2 rounded-md hover:bg-accent/10">Impact maps</Link>
+                      <Link to="/impact-analysis/" className="px-2 py-2 rounded-md hover:bg-accent/10">Impact maps</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Link to="/implementation-plans" className="px-2 py-2 rounded-md hover:bg-accent/10">Implementation Plans</Link>
+                      <Link to="/implementation-plans/" className="px-2 py-2 rounded-md hover:bg-accent/10">Implementation Plans</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Link to="/integrations" className="px-2 py-2 rounded-md hover:bg-accent/10">Integrations</Link>
+                      <Link to="/integrations/" className="px-2 py-2 rounded-md hover:bg-accent/10">Integrations</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Link to="/variance" className="px-2 py-2 rounded-md hover:bg-accent/10">Variance</Link>
+                      <Link to="/variance/" className="px-2 py-2 rounded-md hover:bg-accent/10">Variance</Link>
                     </SheetClose>
                   </nav>
                 </div>
@@ -226,13 +226,13 @@ export function Header() {
                   <div className="text-muted-foreground text-sm uppercase">Solutions</div>
                   <nav className="flex flex-col">
                     <SheetClose asChild>
-                      <Link to="/product-managers" className="px-2 py-2 rounded-md hover:bg-accent/10">For Product Managers</Link>
+                      <Link to="/product-managers/" className="px-2 py-2 rounded-md hover:bg-accent/10">For Product Managers</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Link to="/engineering-managers" className="px-2 py-2 rounded-md hover:bg-accent/10">For Engineering Managers</Link>
+                      <Link to="/engineering-managers/" className="px-2 py-2 rounded-md hover:bg-accent/10">For Engineering Managers</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Link to="/developers" className="px-2 py-2 rounded-md hover:bg-accent/10">For Developers</Link>
+                      <Link to="/developers/" className="px-2 py-2 rounded-md hover:bg-accent/10">For Developers</Link>
                     </SheetClose>
                   </nav>
                 </div>
@@ -240,7 +240,7 @@ export function Header() {
                 <div className="space-y-2">
                   <nav className="flex flex-col">
                     <SheetClose asChild>
-                      <Link to="/pricing" className="px-2 py-2 rounded-md hover:bg-accent/10">Pricing</Link>
+                      <Link to="/pricing/" className="px-2 py-2 rounded-md hover:bg-accent/10">Pricing</Link>
                     </SheetClose>
                   </nav>
                 </div>

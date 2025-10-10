@@ -181,13 +181,13 @@ export function Footer() {
                 Terms of Use
               </a>
               <a 
-                href="/privacy-policy" 
+                href="/privacy-policy/" 
                 className="text-primary-foreground/80 hover:text-primary-foreground text-sm hover:scale-105 transition-all duration-200 hover:underline decoration-accent underline-offset-4"
               >
                 Privacy Policy
               </a>
               <a 
-                href="/security" 
+                href="/security/" 
                 className="text-primary-foreground/80 hover:text-primary-foreground text-sm hover:scale-105 transition-all duration-200 hover:underline decoration-accent underline-offset-4"
               >
                 Security
