@@ -1,5 +1,6 @@
 import React from "react";
 import { SolutionsPageTemplate } from "./SolutionsPageTemplate";
+const varianceImg = new URL("../assets/variance.png", import.meta.url).href;
 import { Target, RotateCcw, CheckCircle2, Shield, Eye, ClipboardCheck, TrendingUp, AlertCircle } from "lucide-react";
 
 export function EngineeringManagersPage() {
@@ -20,6 +21,8 @@ export function EngineeringManagersPage() {
         ctaText: "Book a Demo",
         ctaLink: "#"
       }}
+      sideImage={varianceImg}
+      sideImageAlt="Variance dashboard illustration"
       pain={{
         title: "Pain",
         description: "Output volatility, slipped sprints, quality regressions."

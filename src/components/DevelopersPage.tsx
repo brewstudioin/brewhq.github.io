@@ -1,5 +1,6 @@
 import React from "react";
 import { SolutionsPageTemplate } from "./SolutionsPageTemplate";
+const developerImg = new URL("../assets/developer.png", import.meta.url).href;
 import { Zap, Clock, FileText, AlertTriangle, Play, Eye, RefreshCw, AlertCircle } from "lucide-react";
 
 export function DevelopersPage() {
@@ -20,6 +21,8 @@ export function DevelopersPage() {
         ctaText: "Try Now",
         ctaLink: "#"
       }}
+      sideImage={developerImg}
+      sideImageAlt="Developer workflow illustration"
       pain={{
         title: "Pain",
         description: "Vague tickets, missing context, constant back‑and‑forth."

@@ -256,7 +256,7 @@ export function HeroSection() {
               variant="outline"
               size="lg" 
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg hover:scale-105 transition-transform duration-200"
-              onClick={() => window.open('https://app.brewstudio.in/signup', '_blank')}
+              onClick={() => window.open('https://app.reclaim.ai/m/somangshu/meet-me', '_blank')}
             >
               Book a Demo
             </Button>

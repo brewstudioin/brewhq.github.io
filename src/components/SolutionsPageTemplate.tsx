@@ -40,6 +40,8 @@ interface SolutionsPageTemplateProps {
   };
 
 
+  sideImage?: string;
+  sideImageAlt?: string;
   faqs: Array<{
     question: string;
     answer: string;
@@ -53,6 +55,8 @@ export function SolutionsPageTemplate({
   benefits,
   whatYouCanDo,
   quote,
+  sideImage,
+  sideImageAlt,
   faqs
 }: SolutionsPageTemplateProps) {
   return (
@@ -144,25 +148,33 @@ export function SolutionsPageTemplate({
       <section className="w-full py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Pain */}
-              <div className="bg-secondary/40 rounded-lg p-8 border border-border">
-                <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-6">
-                  {pain.title}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {pain.description}
-                </p>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-1 md:order-none">
+                <img
+                  src={sideImage}
+                  alt={sideImageAlt || `${pain.title} illustration`}
+                  className="w-full h-auto rounded-xl border border-border shadow-sm object-cover"
+                />
               </div>
-              
-              {/* Promise */}
-              <div className="bg-secondary/40 rounded-lg p-8 border border-border">
-                <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-6">
-                  {promise.title}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {promise.description}
-                </p>
+              <div className="order-2 md:order-none space-y-8">
+                {/* Pain */}
+                <div className="bg-secondary/40 rounded-lg p-8 border border-border mb-3">
+                  <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-6">
+                    {pain.title}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {pain.description}
+                  </p>
+                </div>
+                {/* Promise */}
+                <div className="bg-secondary/40 rounded-lg p-8 border border-border mb-3">
+                  <h2 className="text-2xl md:text-3xl font-medium text-foreground mb-6">
+                    {promise.title}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {promise.description}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -245,7 +257,7 @@ export function SolutionsPageTemplate({
               <Button 
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
-                onClick={() => window.open('https://app.brewstudio.in/signup', '_blank')}
+                onClick={() => window.open('https://app.reclaim.ai/m/somangshu/meet-me', '_blank')}
               >
                 Book a Demo
               </Button>

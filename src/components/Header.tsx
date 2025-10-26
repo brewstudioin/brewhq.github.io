@@ -179,7 +179,7 @@ export function Header() {
           </Button>
           <Button
             className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
-            onClick={() => window.open('https://app.brewstudio.in/signup', '_blank')}
+            onClick={() => window.open('https://app.reclaim.ai/m/somangshu/meet-me', '_blank')}
           >
             Book a Demo
           </Button>
@@ -255,7 +255,7 @@ export function Header() {
                   </Button>
                   <Button
                     className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
-                    onClick={() => window.open('https://app.brewstudio.in/signup', '_blank')}
+                    onClick={() => window.open('https://app.reclaim.ai/m/somangshu/meet-me', '_blank')}
                   >
                     Book a Demo
                   </Button>

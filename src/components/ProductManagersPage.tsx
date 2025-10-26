@@ -1,5 +1,6 @@
 import React from "react";
 import { SolutionsPageTemplate } from "./SolutionsPageTemplate";
+const impactSummaryImg = new URL("../assets/impact_summary.png", import.meta.url).href;
 import { Users, CheckCircle, ArrowRight, AlertTriangle, FileText, GitPullRequest, Slack, Eye } from "lucide-react";
 
 export function ProductManagersPage() {
@@ -20,6 +21,8 @@ export function ProductManagersPage() {
         ctaText: "Get Started",
         ctaLink: "#"
       }}
+      sideImage={impactSummaryImg}
+      sideImageAlt="Impact summary illustration"
       pain={{
         title: "Pain",
         description: "Vague specs, shifting scope, endless reviews and plan-splaning."
