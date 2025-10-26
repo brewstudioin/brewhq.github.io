@@ -72,7 +72,7 @@ export function Footer() {
                   <li key={index}>
                     {"page" in link ? (
                       <Link 
-                        to={`/${link.page}`}
+                        to={`/${link.page}/`}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group text-left w-full"
                       >
                         {link.label}
@@ -112,7 +112,7 @@ export function Footer() {
                   <li key={index}>
                     {"page" in link ? (
                       <Link 
-                        to={`/${link.page}`}
+                        to={`/${link.page}/`}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group text-left w-full"
                       >
                         {link.label}
@@ -142,7 +142,7 @@ export function Footer() {
                   <li key={index}>
                     {"page" in link ? (
                       <Link 
-                        to={`/${link.page}`}
+                        to={`/${link.page}/`}
                         className="text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-1 transition-all duration-200 inline-block group text-left w-full"
                       >
                         {link.label}
