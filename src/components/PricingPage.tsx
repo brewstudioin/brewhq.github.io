@@ -104,19 +104,19 @@ export function PricingPage() {
 
   const plans = [
     {
-      name: "Free",
-      price: "$0",
-      period: "forever",
+      name: "Solo",
+      price: "$20",
+      period: "per month",
       description: "Perfect for individual developers and small projects",
-      cta: "Get Started Free",
+      cta: "Get Started",
       popular: false
     },
     {
-      name: "Starter",
+      name: "Startup",
       price: "$29",
       period: "per month",
       description: "For growing teams that need comprehensive development tools",
-      cta: "Start Free Trial",
+      cta: "Get Started",
       popular: true
     },
     {
@@ -332,8 +332,8 @@ export function PricingPage() {
                 <thead>
                   <tr className="bg-secondary/40 border-b border-border">
                     <th className="text-left py-4 px-6 font-medium text-foreground">Limit</th>
-                    <th className="text-center py-4 px-6 font-medium text-foreground">Free</th>
-                    <th className="text-center py-4 px-6 font-medium text-foreground bg-accent/10">Starter</th>
+                    <th className="text-center py-4 px-6 font-medium text-foreground">Solo</th>
+                    <th className="text-center py-4 px-6 font-medium text-foreground bg-accent/10">Startups</th>
                     <th className="text-center py-4 px-6 font-medium text-foreground">Enterprise</th>
                   </tr>
                 </thead>
