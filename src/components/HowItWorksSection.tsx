@@ -21,14 +21,14 @@ export function HowItWorksSection() {
     {
       icon: <Target className="w-8 h-8" />,
       title: "Analyze impact",
-      description: "Auto‑map dependencies across the stack. Customise to your needs, if required.",
+      description: "Auto-map dependencies across the stack. Customise to your needs, if required.",
       number: "03",
       hoverColor: "hover:bg-[#53d3d1]/10"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Generate the plan",
-      description: "Get devlopment‑ready tasks and sync to Jira. Share with your coder",
+      description: "Get development-ready tasks and sync to Jira. Share with your coder",
       number: "04",
       hoverColor: "hover:bg-[#feb249]/10"
     }
