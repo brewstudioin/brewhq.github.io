@@ -32,8 +32,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Raise Velocity with Context | Brew Studio"
-                  description="Turn requirements into impact analysis and development-ready plans. Cut rework, reduce cycle time, and ship predictably."
+                  title="Context Management Tool | Brew Studio"
+                  description="Go to market faster with clear requirements, impact analysis and development-ready plans."
                   path="/"
                 />
                 <HomePage />
@@ -58,8 +58,8 @@ export default function App() {
             element={
               <>
                 <SEO 
-                  title="Clear Plans for Devs & AI Agents | Brew Studio"
-                  description="Turn requirements into development-ready tasks with estimates. Cut rework, speed handoffs, and ship sustainably."
+                  title="Clear Implementation Plans for Devs & AI Agents | Brew Studio"
+                  description="Provide context to AI agents and developers to help them understand the requirements and implement them faster."
                   path="/implementation-plans"
                 />
                 <ImplementationPlansPage />
@@ -72,7 +72,7 @@ export default function App() {
               <>
                 <SEO 
                   title="Integrations: Jira, Slack & GitHub | Brew Studio"
-                  description="Plug Brew Studio into Jira, Slack, and GitHub to keep context intact from requirement to code. Roadmap: VS Code and agent adapters."
+                  description="Plug Brew Studio into Jira, Slack, and GitHub to keep context intact from all sources. Roadmap: VS Code and agent adapters."
                   path="/integrations"
                 />
                 <IntegrationsPage />
@@ -85,7 +85,7 @@ export default function App() {
               <>
                 <SEO 
                   title="Variance: Requirement-vs-Code Guardrails | Brew Studio"
-                  description="Continuous checks compare code to requirements and ACs, flagging discrepancies and opening follow-ups so teams fix issues fast."
+                  description="Continuous checks compare code to requirements, flagging drifts and opening follow-ups so issue fixes fast."
                   path="/variance"
                 />
                 <VariancePage />

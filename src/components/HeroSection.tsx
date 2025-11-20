@@ -250,7 +250,7 @@ export function HeroSection() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
               onClick={() => window.open('https://app.brewstudio.in/signup', '_blank')}
             >
-              Try Now
+              Sign-up
             </Button>
             <Button 
               variant="outline"

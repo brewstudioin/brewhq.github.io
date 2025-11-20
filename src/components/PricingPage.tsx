@@ -233,6 +233,13 @@ export function PricingPage() {
                 )}
                 
                 <div className="text-center mb-8">
+                  {(plan.name === "Solo" || plan.name === "Startup") && (
+                    <div className="mb-3">
+                      <span className="bg-[#feb249] text-[#510701] px-4 py-1.5 rounded-full text-sm font-medium inline-block">
+                        14-day free
+                      </span>
+                    </div>
+                  )}
                   <h3 className="text-2xl font-medium text-foreground mb-2">{plan.name}</h3>
                   <div className="mb-4">
                     <span className="text-4xl font-medium text-primary">{plan.price}</span>

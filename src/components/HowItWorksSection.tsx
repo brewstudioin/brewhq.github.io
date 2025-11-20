@@ -1,36 +1,36 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { GitBranch, FileText, Target, Zap } from "lucide-react";
+import { FileText, Target, Zap, GitCompare } from "lucide-react";
 
 export function HowItWorksSection() {
   const steps = [
     {
-      icon: <GitBranch className="w-8 h-8" />,
-      title: "Add your code",
-      description: "Link code repos that your teams are working on. Link multiple repos to a single porject.",
-      number: "01",
-      hoverColor: "hover:bg-[#53d3d1]/10"
-    },
-    {
       icon: <FileText className="w-8 h-8" />,
       title: "Requirement",
       description: "Paste or write it in BrewHQ. You can also export from your PM tool",
-      number: "02",
+      number: "01",
       hoverColor: "hover:bg-[#feb249]/10"
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: "Analyze impact",
       description: "Auto‑map dependencies across the stack. Customise to your needs, if required.",
-      number: "03",
+      number: "02",
       hoverColor: "hover:bg-[#53d3d1]/10"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Generate the plan",
       description: "Get devlopment‑ready tasks and sync to Jira. Share with your coder",
-      number: "04",
+      number: "03",
       hoverColor: "hover:bg-[#feb249]/10"
+    },
+    {
+      icon: <GitCompare className="w-8 h-8" />,
+      title: "Variance Detection",
+      description: "Flag any drifts and tie a commit to the requirement automatically",
+      number: "04",
+      hoverColor: "hover:bg-[#53d3d1]/10"
     }
   ];
 

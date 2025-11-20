@@ -60,9 +60,6 @@ export function VarianceHeroSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight relative">
-            <span className="absolute -top-2 -left-4 z-20 bg-accent/90 text-accent-foreground px-3 py-1 rounded-full text-xs font-medium -rotate-12 transform">
-              Upcoming
-            </span>
             <span className="block mb-2">
               Understand{" "}
               <span className="text-primary relative inline-block">
@@ -81,7 +78,7 @@ export function VarianceHeroSection() {
               size="lg" 
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
             >
-              Waitlist sign-up
+              Sign-up to try now
             </Button>
           </div>
 

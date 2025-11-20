@@ -4,7 +4,6 @@ import { VelocitySection } from "./VelocitySection";
 import { BrewWaySection } from "./BrewWaySection";
 import { BenefitsSection } from "./BenefitsSection";
 import { TrustedBySection } from "./TrustedBySection";
-import { FeaturesSection } from "./FeaturesSection";
 import { HowItWorksSection } from "./HowItWorksSection";
 
 export function HomePage() {
@@ -15,7 +14,6 @@ export function HomePage() {
       <BrewWaySection />
       <BenefitsSection />
       <TrustedBySection />
-      <FeaturesSection />
       <HowItWorksSection />
     </>
   );
