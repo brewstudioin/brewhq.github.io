@@ -25,7 +25,7 @@ export function DevelopersPage() {
       sideImageAlt="Developer workflow illustration"
       pain={{
         title: "Pain",
-        description: "Vague tickets, missing context, constant back‑and‑forth."
+        description: "Vague tickets, missing context, constant back-and-forth."
       }}
       promise={{
         title: "Promise",

@@ -1,5 +1,6 @@
 import React from "react";
 import { List, Target, TrendingUp, ShieldCheck, GitBranch } from "lucide-react";
+const developerImg = new URL("../assets/developer.png", import.meta.url).href;
 
 // Import will be added once the image file exists
 // import implementationScreenshot from "../assets/implementation_prompt.png";
@@ -79,10 +80,11 @@ export function ImplementationWhatItDoesSection() {
             {/* TODO: Add implementation_prompt.png to src/assets/, then uncomment the import above and this section */}
             <div className="flex items-stretch h-full">
               <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl border-2 border-border/50 bg-white p-3 flex items-center justify-center">
-                <div className="text-muted-foreground text-center">
-                  <p className="text-sm">Add implementation_prompt.png to src/assets/</p>
-                  <p className="text-xs mt-2">Image will appear here</p>
-                </div>
+                <img
+                  src={developerImg}
+                  alt="Implemenatiation plan prompt"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>

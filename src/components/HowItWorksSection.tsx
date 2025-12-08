@@ -83,7 +83,7 @@ export function HowItWorksSection() {
             <h3 className="text-2xl md:text-3xl font-medium text-foreground mb-6 text-center">
               From our CTO's desk
             </h3>
-            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg" style={{height: "550px"}}>
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/KI6mcP5EFaU?si=v-I_3NsDlwI_TZVX"

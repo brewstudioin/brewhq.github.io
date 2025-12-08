@@ -71,7 +71,7 @@ export function TrustedBySection() {
           {/* Testimonials */}
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-border hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-accent/40 group relative overflow-hidden">
+              <div key={index} className="flex flex-col justify-center bg-white rounded-lg p-6 shadow-sm border border-border hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-accent/40 group relative overflow-hidden">
                 
                 <p className="text-muted-foreground mb-6 italic leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   "{testimonial.quote}"

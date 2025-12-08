@@ -82,23 +82,23 @@ export function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link 
-                        to="/integrations/"
-                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
-                      >
-                        <div>
-                          <div className="font-medium text-foreground">Integrations</div>
-                          <div className="text-sm text-muted-foreground">Connect with your tools</div>
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link 
                         to="/variance/"
                         className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
                       >
                         <div>
                           <div className="font-medium text-foreground">Variance</div>
                           <div className="text-sm text-muted-foreground">Track project deviation</div>
+                        </div>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link 
+                        to="/integrations/"
+                        className="block p-3 rounded-md hover:bg-accent/10 transition-colors w-full text-left"
+                      >
+                        <div>
+                          <div className="font-medium text-foreground">Integrations</div>
+                          <div className="text-sm text-muted-foreground">Connect with your tools</div>
                         </div>
                       </Link>
                     </NavigationMenuLink>
