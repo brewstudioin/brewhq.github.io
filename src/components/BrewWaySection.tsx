@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, Settings, FileText, Link } from "lucide-react";
+import { Search, Settings, FileText, GitCompare } from "lucide-react";
 
 export function BrewWaySection() {
   const features = [
@@ -22,9 +22,9 @@ export function BrewWaySection() {
       color: "hover:bg-[#53d3d1]/10"
     },
     {
-      icon: <Link className="w-6 h-6" />,
-      title: "Integrations",
-      description: "Sync everything straight to where your team works, ensuring single source of truth",
+      icon: <GitCompare className="w-6 h-6" />,
+      title: "Variance",
+      description: "Proactively identify drift and flag it to ensure you are on top of scope creeps and release bugs",
       color: "hover:bg-[#feb249]/10"
     }
   ];

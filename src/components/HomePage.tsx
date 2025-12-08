@@ -13,8 +13,8 @@ export function HomePage() {
       <VelocitySection />
       <BrewWaySection />
       <BenefitsSection />
-      <TrustedBySection />
       <HowItWorksSection />
+      <TrustedBySection />
     </>
   );
 }

@@ -1,10 +1,38 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function HeroSection() {
   const [hoveredShape, setHoveredShape] = useState<number | null>(null);
   const [clickedShapes, setClickedShapes] = useState<number[]>([]);
+  const [currentHeaderIndex, setCurrentHeaderIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  
+  const changingParts = [
+    { text: "time-to-market.", color: "#feb249" },
+    { text: "production bugs.", color: "#53d3d1" },
+    { text: "dev rework.", color: "#feb249" },
+    { text: "scope creep.", color: "#53d3d1" },
+    { text: "unclear specs.", color: "#feb249" },
+    { text: "miscommunication.", color: "#53d3d1" }
+  ];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Fade out
+      setIsVisible(false);
+      // Change header after fade out completes
+      setTimeout(() => {
+        setCurrentHeaderIndex((prev) => 
+          (prev + 1) % changingParts.length
+        );
+        // Fade in
+        setIsVisible(true);
+      }, 300);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [changingParts.length]);
 
   const productOfferings = [
     { id: 1, name: "Requirements Analysis", color: "#feb249", description: "Clear, actionable requirements" },
@@ -232,16 +260,29 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-foreground mb-6 leading-tight">
-            Cut development time
+          <h1 
+            className="text-5xl md:text-6xl lg:text-7xl font-medium text-foreground mb-6 leading-tight"
+          >
+            <span className="inline-block">Reduce</span>{' '}
+            <span 
+              className={`inline-block transition-all duration-300 ease-in-out ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+              }`}
+              style={{ 
+                color: changingParts[currentHeaderIndex].color,
+                fontWeight: 'bold',
+                fontFamily: "'Rock Salt', cursive"
+              }}
+            >
+              {changingParts[currentHeaderIndex].text}
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             AI that boosts team velocity and predictability.
           </p>
           
           <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-4xl mx-auto">
-            No more goldfish memory. Get clear requirements, surface hidden dependencies and development-ready 
-            implementation plans. All under one roof.
+            Brew connects every requirement to real code changes, removes missing context between specs and code and flags drift proactively, so you ship what you planned—on time
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

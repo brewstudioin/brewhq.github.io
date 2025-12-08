@@ -19,10 +19,10 @@ export function TrustedBySection() {
       company: "Saadian"
     },
     {
-      quote: "The dependency mapping alone saved us weeks of rework. Game changer for our team.",
-      author: "Mike Rodriguez", 
-      role: "Product Manager",
-      company: "WingsBI"
+      quote: "Certain complex use cases were difficult to talk about in cursor, because either they were spreading across different repo or needed some kinda POC first to have the final arch. This is where Brew shined, it allowed me to first review the arch and from that it created a detailed prompt for my coding agent. It also helped me review this code easily by auto comparing it to the original arch and implementation prompt.",
+      author: "Nikhilesh Vaishya", 
+      role: "CTO",
+      company: "Truxie"
     },
     {
       quote: "Finally, implementation plans that our developers actually want to follow.",
@@ -53,6 +53,7 @@ export function TrustedBySection() {
                       src={company.logo} 
                       alt={`${company.name} logo`}
                       className="h-10 w-auto max-w-[160px] object-contain group-hover:scale-105 transition-transform duration-300"
+                      style={company.name === "WingsBI" ? { filter: 'invert(1)' } : {}}
                       onError={(e) => {
                         console.log(`Failed to load logo for ${company.name}`);
                         e.currentTarget.style.display = 'none';

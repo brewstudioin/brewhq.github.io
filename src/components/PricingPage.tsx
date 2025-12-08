@@ -289,10 +289,10 @@ export function PricingPage() {
                 <thead>
                   <tr className="bg-secondary/40 border-b border-border">
                     <th className="text-left py-4 px-6 font-medium text-foreground">Feature</th>
-                    <th className="text-center py-4 px-6 font-medium text-foreground">Free</th>
+                    <th className="text-center py-4 px-6 font-medium text-foreground">Solo</th>
                     <th className="text-center py-4 px-6 font-medium text-foreground bg-accent/10">
                       <div className="relative">
-                        Starter
+                        Startup
                         <div className="absolute left-1/2 transform -translate-x-1/2">
                           <span className="bg-accent text-accent-foreground px-2 py-1 rounded text-xs">
                             Popular
@@ -340,7 +340,7 @@ export function PricingPage() {
                   <tr className="bg-secondary/40 border-b border-border">
                     <th className="text-left py-4 px-6 font-medium text-foreground">Limit</th>
                     <th className="text-center py-4 px-6 font-medium text-foreground">Solo</th>
-                    <th className="text-center py-4 px-6 font-medium text-foreground bg-accent/10">Startups</th>
+                    <th className="text-center py-4 px-6 font-medium text-foreground bg-accent/10">Startup</th>
                     <th className="text-center py-4 px-6 font-medium text-foreground">Enterprise</th>
                   </tr>
                 </thead>
@@ -396,7 +396,8 @@ export function PricingPage() {
         </div>
       </section>
 
-      {/* Add-Ons Section */}
+      {/* Add-Ons Section - Hidden for now, can be restored in the future */}
+      {false && (
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
@@ -501,6 +502,7 @@ export function PricingPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-20 px-6">
@@ -523,7 +525,7 @@ export function PricingPage() {
                 size="lg" 
                 variant="outline"
                 className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-3 hover:scale-105 transition-all duration-200 text-lg bg-primary-foreground"
-                onClick={() => window.open('mailto:support@brewstudio.in', '_blank')}
+                onClick={() => window.open('https://app.reclaim.ai/m/somangshu/meet-me', '_blank')}
               >
                 Contact Sales
               </Button>

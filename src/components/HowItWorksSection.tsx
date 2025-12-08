@@ -47,8 +47,8 @@ export function HowItWorksSection() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {steps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className={`bg-white rounded-lg p-6 shadow-sm border border-border mb-4 relative hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-accent/40 ${step.hoverColor}`}>
+              <div key={index} className="text-center group flex flex-col">
+                <div className={`bg-white rounded-lg p-6 shadow-sm border border-border mb-4 relative hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-accent/40 ${step.hoverColor} flex flex-col h-full`}>
                   {index < steps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                       <div className="w-8 h-0.5 bg-accent animate-pulse"></div>
@@ -70,12 +70,30 @@ export function HowItWorksSection() {
                   <h3 className="text-lg font-medium text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                     {step.description}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Video Section */}
+          <div className="mb-12">
+            <h3 className="text-2xl md:text-3xl font-medium text-foreground mb-6 text-center">
+              From our CTO's desk
+            </h3>
+            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/KI6mcP5EFaU?si=v-I_3NsDlwI_TZVX"
+                title="How brew works"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
           
           <div className="text-center">
